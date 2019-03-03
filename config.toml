@@ -19,11 +19,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "Hjem"
-    url = "suppe-og-analyse.netlify.com"
+    url = "/"
     weight = 1
 [[menu.main]]
     name = "Om meg"
-    url = "suppe-og-analyse.netlify.com/om-meg/"
+    url = "/om-meg/"
     weight = 2
 [[menu.main]]
     name = "GitHub"
