@@ -1,0 +1,13 @@
+---
+title: Om meg
+author: Eivind
+date: '2019-03-03'
+slug: om-meg
+categories: []
+tags: []
+---
+
+> Vi tror på suppe, alle andre må ha med data.  
+
+En blogg med ting om mat og analyse.
+
