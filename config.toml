@@ -1,4 +1,4 @@
-baseurl = "http://127.0.0.1"
+baseurl = "suppe-og-analyse.netlify.com"
 title = "Suppe og analyse"
 author = "Eivind"
 canonifyurls = true
@@ -19,21 +19,17 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "Hjem"
-    url = "http://127.0.0.1:4321"
+    url = "suppe-og-analyse.netlify.com"
     weight = 1
 [[menu.main]]
     name = "Om meg"
-    url = "http://127.0.0.1:4321/om-meg/"
+    url = "suppe-og-analyse.netlify.com/om-meg/"
     weight = 2
 [[menu.main]]
     name = "GitHub"
     url = "https://github.com/gardenberg"
     weight = 3
 [[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/road2stat"
-    weight = 4
-[[menu.main]]
     name = "RSS"
     url = "/index.xml"
-    weight = 5
+    weight = 4
