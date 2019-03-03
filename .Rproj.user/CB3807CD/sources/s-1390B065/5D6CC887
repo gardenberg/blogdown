@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551642323898.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5D6CC887",
+    "lastKnownWriteTime" : 1551642393,
+    "last_content_update" : 1551642393904,
+    "path" : "~/R/test_blogdown/content/post/2019-03-03-en-ny-testpost.Rmd",
+    "project_path" : "content/post/2019-03-03-en-ny-testpost.Rmd",
+    "properties" : {
+        "cursorPosition" : "16,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

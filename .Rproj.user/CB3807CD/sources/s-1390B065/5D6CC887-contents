@@ -1,0 +1,17 @@
+---
+title: En ny testpost
+author: Eivind
+date: '2019-03-03'
+slug: en-ny-testpost
+categories:
+  - R
+tags:
+  - regression
+---
+
+Dette er R Markdown
+
+```{r}
+summary(cars)
+```
+

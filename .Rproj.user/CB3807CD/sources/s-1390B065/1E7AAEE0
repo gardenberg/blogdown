@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551644124111.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2727835530",
+    "id" : "1E7AAEE0",
+    "lastKnownWriteTime" : 1551644309,
+    "last_content_update" : 1551644309855,
+    "path" : "~/R/test_blogdown/content/om-meg.Rmd",
+    "project_path" : "content/om-meg.Rmd",
+    "properties" : {
+        "cursorPosition" : "13,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
