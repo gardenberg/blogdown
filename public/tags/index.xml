@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Suppe og analyse</title>
-    <link>/suppe-og-analyse.netlify.com/tags/</link>
-    <description>Recent content in Tags on Suppe og analyse</description>
+    <title>Tags on Hugo Tanka Theme</title>
+    <link>/hugo-tanka/tags/</link>
+    <description>Recent content in Tags on Hugo Tanka Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
     
-	<atom:link href="/suppe-og-analyse.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/hugo-tanka/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Plot</title>
-      <link>/suppe-og-analyse.netlify.com/tags/plot/</link>
+      <link>/hugo-tanka/tags/plot/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/suppe-og-analyse.netlify.com/tags/plot/</guid>
+      <guid>/hugo-tanka/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/suppe-og-analyse.netlify.com/tags/r-markdown/</link>
+      <link>/hugo-tanka/tags/r-markdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/suppe-og-analyse.netlify.com/tags/r-markdown/</guid>
+      <guid>/hugo-tanka/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regression</title>
-      <link>/suppe-og-analyse.netlify.com/tags/regression/</link>
-      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
+      <link>/hugo-tanka/tags/regression/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/suppe-og-analyse.netlify.com/tags/regression/</guid>
+      <guid>/hugo-tanka/tags/regression/</guid>
       <description></description>
     </item>
     

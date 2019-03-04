@@ -1,6 +1,6 @@
-baseurl = "suppe-og-analyse.netlify.com"
-title = "Suppe og analyse"
-author = "Eivind"
+baseurl = "https://nanx.me/hugo-tanka/"
+title = "Hugo Tanka Theme"
+author = "Nan Xiao"
 canonifyurls = true
 languagecode = "en"
 theme = "hugo-tanka"
@@ -15,23 +15,23 @@ pygmentscodefences = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
-  sitename = "Stol på suppe - alle andre må vise data"
+  sitename = "Hugo Tanka Theme"
 
 [[menu.main]]
-    name = "Hjem"
-    url = "/"
+    name = "Home"
+    url = "https://nanx.me"
     weight = 1
 [[menu.main]]
-    name = "Om meg"
-    url = "/om-meg/"
+    name = "GitHub"
+    url = "https://github.com/road2stat"
     weight = 2
 [[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/gardenberg"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/road2stat"
     weight = 3
 [[menu.main]]
-    name = "RSS"
-    url = "/index.xml"
+    name = "Twitter"
+    url = "https://twitter.com/road2stat"
     weight = 4
 [[menu.main]]
     name = "RSS"

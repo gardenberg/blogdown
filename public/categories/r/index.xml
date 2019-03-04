@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Suppe og analyse</title>
-    <link>/suppe-og-analyse.netlify.com/categories/r/</link>
-    <description>Recent content in R on Suppe og analyse</description>
+    <title>R on Hugo Tanka Theme</title>
+    <link>/hugo-tanka/categories/r/</link>
+    <description>Recent content in R on Hugo Tanka Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
     
-	<atom:link href="/suppe-og-analyse.netlify.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/hugo-tanka/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>En ny testpost</title>
-      <link>/suppe-og-analyse.netlify.com/post/en-ny-testpost/</link>
-      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/suppe-og-analyse.netlify.com/post/en-ny-testpost/</guid>
-      <description>Dette er R Markdown
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.:19.0 3rd Qu.: 56.00 ## Max. :25.0 Max. :120.00</description>
-    </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/suppe-og-analyse.netlify.com/post/2015-07-23-r-rmarkdown/</link>
+      <link>/hugo-tanka/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/suppe-og-analyse.netlify.com/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/hugo-tanka/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
