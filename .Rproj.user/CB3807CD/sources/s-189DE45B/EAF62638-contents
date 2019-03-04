@@ -1,4 +1,4 @@
-baseurl = "https://nanx.me/hugo-tanka/"
+baseurl = "https://suppe-og-analyse.netlify.com/"
 title = "Hugo Tanka Theme"
 author = "Nan Xiao"
 canonifyurls = true
