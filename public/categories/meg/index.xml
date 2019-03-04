@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meg on Suppe og analyse</title>
+    <link>/categories/meg/</link>
+    <description>Recent content in Meg on Suppe og analyse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/meg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Om meg</title>
+      <link>/om-meg/</link>
+      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/om-meg/</guid>
+      <description>Vi stoler på suppe. Alle andre må vise data.
+Litt “alltid personlig, aldri privat”-informasjon.</description>
+    </item>
+    
+  </channel>
+</rss>

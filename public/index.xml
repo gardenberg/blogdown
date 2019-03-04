@@ -6,10 +6,20 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Om meg</title>
+      <link>/om-meg/</link>
+      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/om-meg/</guid>
+      <description>Vi stoler på suppe. Alle andre må vise data.
+Litt “alltid personlig, aldri privat”-informasjon.</description>
+    </item>
     
     <item>
       <title>Tanka Theme Demo</title>
