@@ -1,6 +1,6 @@
 baseurl = "https://suppe-og-analyse.netlify.com/"
-title = "Hugo Tanka Theme"
-author = "Nan Xiao"
+title = "Suppe og analyse"
+author = "Eivind"
 canonifyurls = true
 languagecode = "en"
 theme = "hugo-tanka"
@@ -18,8 +18,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   sitename = "Suppe og analyse"
 
 [[menu.main]]
-    name = "Home"
-    url = "https://nanx.me"
+    name = "Hjem"
+    url = "https://suppe-og-analyse.netlify.com/"
     weight = 1
 [[menu.main]]
     name = "GitHub"
