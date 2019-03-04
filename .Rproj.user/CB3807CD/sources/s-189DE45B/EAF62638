@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "824891799",
+    "hash" : "1973067524",
     "id" : "EAF62638",
-    "lastKnownWriteTime" : 1551733579,
-    "last_content_update" : 1551733579942,
+    "lastKnownWriteTime" : 1551734184,
+    "last_content_update" : 1551734184631,
     "path" : "~/R/test_blogdown/config.toml",
     "project_path" : "config.toml",
     "properties" : {
-        "cursorPosition" : "29,19",
-        "scrollLine" : "17"
+        "cursorPosition" : "30,14",
+        "scrollLine" : "10"
     },
     "relative_order" : 1,
     "source_on_save" : false,
