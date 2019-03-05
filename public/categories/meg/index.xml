@@ -21,5 +21,15 @@
 Litt “alltid personlig, aldri privat”-informasjon.</description>
     </item>
     
+    <item>
+      <title>Halvmigrering til Hugo</title>
+      <link>/post/halvmigrering-til-hugo/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/halvmigrering-til-hugo/</guid>
+      <description>Etter å ha latt bloggen min Kontext ligge i regneregne fem og et halvt år, våknet jeg opp en morgen og tenkte: på tide å skrive noe på internett!
+Når jeg kikka på GitHub-repoene mine, innså jeg at flere av dem begynte å likne på blogg-artikler om ymse temaer. I morgen-ørska på bussen snubla jeg så over en artikkel om å flytte bloggen din til Blogdown. Siden jeg allerede bruker R som go-to-verktøy for ymse ting, virket dette rimelig.</description>
+    </item>
+    
   </channel>
 </rss>

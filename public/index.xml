@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Halvmigrering til Hugo</title>
+      <link>/post/halvmigrering-til-hugo/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/halvmigrering-til-hugo/</guid>
+      <description>Etter å ha latt bloggen min Kontext ligge i regneregne fem og et halvt år, våknet jeg opp en morgen og tenkte: på tide å skrive noe på internett!
+Når jeg kikka på GitHub-repoene mine, innså jeg at flere av dem begynte å likne på blogg-artikler om ymse temaer. I morgen-ørska på bussen snubla jeg så over en artikkel om å flytte bloggen din til Blogdown. Siden jeg allerede bruker R som go-to-verktøy for ymse ting, virket dette rimelig.</description>
+    </item>
+    
+    <item>
       <title>Tanka Theme Demo</title>
       <link>/post/tanka-theme-demo/</link>
       <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
@@ -66,6 +76,153 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       
       <guid>/post/lorem-ipsum/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Hvordan fordeles mandater ved stortingsvalg?</title>
+      <link>/post/hvordan-fordeles-mandater-ved-stortingsvalg/</link>
+      <pubDate>Tue, 03 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hvordan-fordeles-mandater-ved-stortingsvalg/</guid>
+      <description>Demokrati er som vi alle veit vanskelig på flere plan – ikke minst når en snakker om praktisk gjennomføring. For hvordan fungerer egentlig Stortingsvalget? Med kun seks små dager igjen til valget, kan det være greit å ta noen skritt tilbake og huske på hvordan et valg faktisk ser ut.
+For det første: Alle som stemmer, stemmer i fylket hvor de er folkeregistrerte. Osloborgere velger en liste fra et parti som stiller til valg i Oslo, trøndere velger på lister som stilles i Sør- eller Nord-Trøndelag.</description>
+    </item>
+    
+    <item>
+      <title>Rammevilkår viktigere enn størrelse</title>
+      <link>/post/rammevilk%C3%A5r-viktigere-enn-st%C3%B8rrelse/</link>
+      <pubDate>Tue, 20 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rammevilk%C3%A5r-viktigere-enn-st%C3%B8rrelse/</guid>
+      <description>Dette innlegget sto på trykk i Nationen fredag 9. august, og er basert på en ny rapport jeg har skrevet for AgriAnalyse på oppdrag fra Geno, Nortura og Tine.
+Debatten om størrelsesutvikling på norske gårdsbruk har gått i sommer. 48 kyr eller 60 kyr per bruk, tallene fra ulike utredninger kastes rundt og ikke minst Høyre har vært i senter. Svein Flåtten i Høyre står for et foreløpig siste bidrag når han (i Aftenposten 30.</description>
+    </item>
+    
+    <item>
+      <title>Om en mulig handelsavtale mellom EU og USA</title>
+      <link>/post/om-en-mulig-handelsavtale-mellom-eu-og-usa/</link>
+      <pubDate>Wed, 07 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/om-en-mulig-handelsavtale-mellom-eu-og-usa/</guid>
+      <description>erdens største handelspartnere, EU og USA, begynte mandag 8. juli formelt første runde i forhandlingene om en frihandelsavtale, Transatlantic Trade and Investment Partnership (TTIP). Runden fant sted i Washington DC, og skulle gå igjennom alle områder som kan komme til å bli omfattet av avtalen.
+Her følger litt info om forhandlingene, og noen kjappe betraktninger rundt mulige konsekvenser. Dette bygger på et orienteringsnotat jeg skrev for noen uker siden, så det er ganske faktatungt.</description>
+    </item>
+    
+    <item>
+      <title>Effekten av matfest på børsen</title>
+      <link>/post/effekten-av-matfest-p%C3%A5-b%C3%B8rsen/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/effekten-av-matfest-p%C3%A5-b%C3%B8rsen/</guid>
+      <description>Hvorvidt matvarespekulasjon har en effekt på priser eller ikke er fortsatt en het debatt. Denne analysen ser næmere på hvordan spekulasjon i matvarer kan tenkes å påvirke prisen på matvarer. Teksten er skrevet for Utveier 1/2013. En versjon med fine bilder og figurer ligger på Issuu, og teksten følger under.
+Dere har stilt spørsmålet “Bidrar investorer til prisøkninger på energi og mat?” Mitt entydige svar er ja. Michael W. Masters, hedgefond-forvalterDen 20.</description>
+    </item>
+    
+    <item>
+      <title>Veit du hva banken din gjør?</title>
+      <link>/post/veit-du-hva-banken-din-gj%C3%B8r/</link>
+      <pubDate>Wed, 27 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/veit-du-hva-banken-din-gj%C3%B8r/</guid>
+      <description>Attac har i lengre tid arbeidet med bankenes rolle i finanskrisa, og blant annet fått utredet en rapport om bankenes tilknytning til skatteparadis og uetiske investeringer (se Attac.no-oppslaget her). Jeg skrev utkast til en uttalelse som, med noen endringer, ble vedtatt på Attac Norges landsmøte 27. februar, og som senere har blitt sent ut som leserbrev.
+Europa er rammet av en gjeldskrise med massearbeidsledighet, kutt i offentlig velferd og angrep på sosiale rettigheter som resultat.</description>
+    </item>
+    
+    <item>
+      <title>Slipp bonden fri! Bør vi lære av Danmark</title>
+      <link>/post/slipp-bonden-fri-b%C3%B8r-vi-l%C3%A6re-av-danmark/</link>
+      <pubDate>Thu, 07 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/slipp-bonden-fri-b%C3%B8r-vi-l%C3%A6re-av-danmark/</guid>
+      <description>«Slipp bonden fri» er blitt et begrep for en deregulert landbrukspolitikk der eiendomsregelverk fjernes og begrensninger på størrelse oppheves. Slik skal enhetene bli større, og de offentlige utgifter mindre. Argumentet er at de gjenværende bønder endelig vil få lønn for strevet, mens de overflødige må legge ned og ta seg jobber i andre deler av økonomien. Men er erfaringen den at deregulering gir bonden bedre lønnsomhet og samfunnet mindre kostnader?</description>
+    </item>
+    
+    <item>
+      <title>Biobränsle eller mat - ett dilemma att lösa</title>
+      <link>/post/biobr%C3%A4nsle-eller-mat-ett-dilemma-att-l%C3%B6sa/</link>
+      <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/biobr%C3%A4nsle-eller-mat-ett-dilemma-att-l%C3%B6sa/</guid>
+      <description>Behovet av ekonomisk tillväxt, minskning av utsläppen växthusgaser och säker energiförsörjning gör att stora västerländska företag i dag fokuserar på förnybar energi. Det ger upphov till ett dilemma mellan bränsle och livsmedel.
+USA täcker för närvarande 55 procent av sitt råoljebehov genom import. Ökad användning av biobränslen är en av åtgärderna på vägen till att bli oberoende av oljeimport på lång sikt. För att uppnå detta mål kommer man att använda samma mark där det för närvarande produceras livsmedel, för att producera biobränslen.</description>
+    </item>
+    
+    <item>
+      <title>Ukens anbefaling: to tekster om forskningsbasert policy</title>
+      <link>/post/ukens-anbefaling-to-tekster-om-forskningsbasert-policy/</link>
+      <pubDate>Sun, 23 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ukens-anbefaling-to-tekster-om-forskningsbasert-policy/</guid>
+      <description>Duncan Green, seniorrådgiver hos Oxfam, skriver på «From poverty to power» om «Theories of Change» og hvordan forskere kan bruke teori for å øke effektiviteten til mottakere av forskningsstøtte. Med andre ord, et teoretisk blikk på hvordan forholdet mellom forskere og beslutningstakere ser ut, og hvordan organisasjoner som gir støtte til forskning og tiltak i NGOer kan bidra til å «optimaliseres» NGOers forskning. «Theories of Change» ser ut til å referere til dette rammeverket for å skape endring.</description>
+    </item>
+    
+    <item>
+      <title>Masteroppgave del 2: Aktualitet og hva jeg skrev om (egentlig)</title>
+      <link>/post/masteroppgave-del-2-aktualitet-og-hva-jeg-skrev-om-egentlig/</link>
+      <pubDate>Sun, 05 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/masteroppgave-del-2-aktualitet-og-hva-jeg-skrev-om-egentlig/</guid>
+      <description>En god (og grunnleggende) huskeregel når en gjør større prosjekter er å ta en lengre pause mot slutten. Etter et par ukers tid med andre oppgaver kan en da se om den røde tråden gir like mye mening som en trodde. Dette tipset er aldri lett å følge, og en kan trenge lange tidsperioder før «oppgave-blindheten» forsvinner.
+Som jeg forsøkte å beskrive i denne posten er masteroppgaven min et forsøk på et stort prosjekt, som integrerer en analyse av konsekvensene av innvandring for ulike faktorer (økonomi, valgadferd) og en analyse av hvordan disse endringene påvirker politiske beslutningstakere.</description>
+    </item>
+    
+    <item>
+      <title>Masteroppgaven del 1: Fører innvandring til velferdsdualisme?</title>
+      <link>/post/masteroppgaven-del-1-f%C3%B8rer-innvandring-til-velferdsdualisme/</link>
+      <pubDate>Sun, 03 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/masteroppgaven-del-1-f%C3%B8rer-innvandring-til-velferdsdualisme/</guid>
+      <description>For noen uker siden fullførte jeg en mastergrad i statsvitenskap, etter noen hundre timer ved datamaskina. Oppgaven, «Fører innvandring til velferdsdualisme? En studie av innvandringens effekter på barnetrygd og kontantstøtte i Skandinavia», vil bli tilgjengelig på Universitet i Oslos digitale portal DUO etter sensur.
+Selv om Wordle-skyen er fin, gir den ikke et helt godt inntrykk av hva det dreier seg om. Siden å forklare dette vil være viktig for meg de neste månedene, kommer det her et kort sammendrag av hva jeg har drevet med de siste månedene.</description>
+    </item>
+    
+    <item>
+      <title>Norske oljeerfaringer og ressursenes forbannelse</title>
+      <link>/post/norske-oljeerfaringer-og-ressursenes-forbannelse/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/norske-oljeerfaringer-og-ressursenes-forbannelse/</guid>
+      <description>serien tidligere publiserte artikler har jeg nå nok en gang skrevet for Attac Norges magasin Utveier. Sist nummer tok for seg klimarettferdighet, med fokus på utfordringer, ødeleggelser og, som vanlig, noen utveier. Jeg hadde gleden av å skrive en artikkel om norske oljeerfaringer.
+Jeg fokuserte på ressursenes forbannelse, hvorvidt norske erfaringer med oljeutvinning kan være til hjelp for land i det globale sør, og hvordan dette passer inn i fokuset på oljen som en bransje med store utofordringer hva gjelder effekter på miljø og klima.</description>
+    </item>
+    
+    <item>
+      <title>Vær en Robin Hood, finansminister Johnsen!</title>
+      <link>/post/v%C3%A6r-en-robin-hood-finansminister-johnsen/</link>
+      <pubDate>Sun, 06 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/post/v%C3%A6r-en-robin-hood-finansminister-johnsen/</guid>
+      <description>Kjære finansminister Sigbjørn Johnsen.
+Finansskatt er idag ansett som et sentralt virkemiddel for å redusere mengden skadelig spekulasjon, samtidig som den vil skape skatteinntekter. Det internasjonale pengefondet IMF har sagt at det er gjennomførbart. EU-parlamentet og EUkommisjonen vil ha skatten. Tyskland, Frankrike, Brasil, India, Kina og Sør-Afrika er med på laget. Da bør Europas mest radikale regjering, med Johnsen i spissen, kjenne sin besøkelsestid og gå inn for verdens mest populære skatt idag.</description>
+    </item>
+    
+    <item>
+      <title>Innføringsartikkel om WTO</title>
+      <link>/post/innf%C3%B8ringsartikkel-om-wto/</link>
+      <pubDate>Mon, 03 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/post/innf%C3%B8ringsartikkel-om-wto/</guid>
+      <description>Av en eller annen grunn ender jeg ofte opp med å skrive innføringsartikler. Coca Cola-saken, WTO, finansmarkeder og Attac er noe av det jeg har forsøkt å forklare på trykk tidligere. Her kommer en artikkel om WTO, publisert i Taklinger nr. 7 i 2007. Artikkelen kunne absolutt trenge en oppdatering og kildeangivelser, selv om dette neppe er noe jeg kommer til å prioritere.
+Det er interessant å se at Pascal Lamy 19.</description>
+    </item>
+    
+    <item>
+      <title>Kritisk journalistikk og den femte statsmakt (kritisk borgerjournalistikk)</title>
+      <link>/post/kritisk-journalistikk-og-den-femte-statsmakt-kritisk-borgerjournalistikk/</link>
+      <pubDate>Fri, 16 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/post/kritisk-journalistikk-og-den-femte-statsmakt-kritisk-borgerjournalistikk/</guid>
+      <description>Internettet er stort, svært, gigantisk. Noen bør sortere ut et par ting som kan være verdt å lese. Denne uken har jeg valgt ut noen kilder om journalisme.
+I et demokrati har Journalisten den svært viktige oppgaven det er å holde oversikt med hvem som får hvilke ressurser, når og hvordan, samt hvorfor dette skjer – for så å informere et størst mulig publikum om det etterpå. Etter å ha jobbet med PR for studentfestivalen ISFiT – verdensstørstestudentfestivalmedtematiskfokus, værsågod – og blant annet fått pressemeldinger direkte skrevet av på dagbladet.</description>
+    </item>
+    
+    <item>
+      <title>Generasjon Praktikum</title>
+      <link>/post/generasjon-praktikum/</link>
+      <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/post/generasjon-praktikum/</guid>
+      <description>Praktikum (n). Subst., praksis (m), praksisperiode (m), praktikanttjeneste (m) (1). Et praksisopphold mange tyske studenter må gjennom for å få godkjent gradene sine, måtte det være bachelor- eller mastergrad, eller noe mer utdatert som magister eller diplom. Mange som ikke må p.g.a. studiet gjør det allikevel for å få hardt tiltrengt arbeidserfaring i et land hvor arbeidsløsheten de siste tolv månedene har ligget på rundt 7% (og underansettelsen på over 10%) (Kilde: SpiegelOnline)</description>
     </item>
     
   </channel>

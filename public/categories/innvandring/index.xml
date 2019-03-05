@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Innvandring on Suppe og analyse</title>
+    <link>/categories/innvandring/</link>
+    <description>Recent content in Innvandring on Suppe og analyse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Aug 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/innvandring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Masteroppgave del 2: Aktualitet og hva jeg skrev om (egentlig)</title>
+      <link>/post/masteroppgave-del-2-aktualitet-og-hva-jeg-skrev-om-egentlig/</link>
+      <pubDate>Sun, 05 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/masteroppgave-del-2-aktualitet-og-hva-jeg-skrev-om-egentlig/</guid>
+      <description>En god (og grunnleggende) huskeregel når en gjør større prosjekter er å ta en lengre pause mot slutten. Etter et par ukers tid med andre oppgaver kan en da se om den røde tråden gir like mye mening som en trodde. Dette tipset er aldri lett å følge, og en kan trenge lange tidsperioder før «oppgave-blindheten» forsvinner.
+Som jeg forsøkte å beskrive i denne posten er masteroppgaven min et forsøk på et stort prosjekt, som integrerer en analyse av konsekvensene av innvandring for ulike faktorer (økonomi, valgadferd) og en analyse av hvordan disse endringene påvirker politiske beslutningstakere.</description>
+    </item>
+    
+    <item>
+      <title>Masteroppgaven del 1: Fører innvandring til velferdsdualisme?</title>
+      <link>/post/masteroppgaven-del-1-f%C3%B8rer-innvandring-til-velferdsdualisme/</link>
+      <pubDate>Sun, 03 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/masteroppgaven-del-1-f%C3%B8rer-innvandring-til-velferdsdualisme/</guid>
+      <description>For noen uker siden fullførte jeg en mastergrad i statsvitenskap, etter noen hundre timer ved datamaskina. Oppgaven, «Fører innvandring til velferdsdualisme? En studie av innvandringens effekter på barnetrygd og kontantstøtte i Skandinavia», vil bli tilgjengelig på Universitet i Oslos digitale portal DUO etter sensur.
+Selv om Wordle-skyen er fin, gir den ikke et helt godt inntrykk av hva det dreier seg om. Siden å forklare dette vil være viktig for meg de neste månedene, kommer det her et kort sammendrag av hva jeg har drevet med de siste månedene.</description>
+    </item>
+    
+  </channel>
+</rss>

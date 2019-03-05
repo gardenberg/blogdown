@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Evidensbasert Policy on Suppe og analyse</title>
+    <link>/categories/evidensbasert-policy/</link>
+    <description>Recent content in Evidensbasert Policy on Suppe og analyse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Sep 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/evidensbasert-policy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ukens anbefaling: to tekster om forskningsbasert policy</title>
+      <link>/post/ukens-anbefaling-to-tekster-om-forskningsbasert-policy/</link>
+      <pubDate>Sun, 23 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ukens-anbefaling-to-tekster-om-forskningsbasert-policy/</guid>
+      <description>Duncan Green, seniorrådgiver hos Oxfam, skriver på «From poverty to power» om «Theories of Change» og hvordan forskere kan bruke teori for å øke effektiviteten til mottakere av forskningsstøtte. Med andre ord, et teoretisk blikk på hvordan forholdet mellom forskere og beslutningstakere ser ut, og hvordan organisasjoner som gir støtte til forskning og tiltak i NGOer kan bidra til å «optimaliseres» NGOers forskning. «Theories of Change» ser ut til å referere til dette rammeverket for å skape endring.</description>
+    </item>
+    
+  </channel>
+</rss>

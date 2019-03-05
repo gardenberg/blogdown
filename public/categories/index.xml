@@ -6,9 +6,73 @@
     <description>Recent content in Categories on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Fri, 26 Aug 2011 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Arbeidsmarked</title>
+      <link>/categories/arbeidsmarked/</link>
+      <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/arbeidsmarked/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evidensbasert Policy</title>
+      <link>/categories/evidensbasert-policy/</link>
+      <pubDate>Sun, 23 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/evidensbasert-policy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Finans</title>
+      <link>/categories/finans/</link>
+      <pubDate>Wed, 27 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/finans/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Handelspolitikk</title>
+      <link>/categories/handelspolitikk/</link>
+      <pubDate>Mon, 03 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/handelspolitikk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Innvandring</title>
+      <link>/categories/innvandring/</link>
+      <pubDate>Sun, 05 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/innvandring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Journalisme</title>
+      <link>/categories/journalisme/</link>
+      <pubDate>Fri, 16 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/journalisme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Landbruk</title>
+      <link>/categories/landbruk/</link>
+      <pubDate>Tue, 20 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/landbruk/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Meg</title>
@@ -25,6 +89,24 @@
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Valg</title>
+      <link>/categories/valg/</link>
+      <pubDate>Tue, 03 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/valg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Økonomi</title>
+      <link>/categories/%C3%B8konomi/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%C3%B8konomi/</guid>
       <description></description>
     </item>
     

@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/halvmigrering-til-hugo/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/tanka-theme-demo/</loc>
     <lastmod>2017-12-26T00:00:00+00:00</lastmod>
   </url>
@@ -28,7 +33,155 @@
   </url>
   
   <url>
+    <loc>/post/hvordan-fordeles-mandater-ved-stortingsvalg/</loc>
+    <lastmod>2013-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/rammevilk%C3%A5r-viktigere-enn-st%C3%B8rrelse/</loc>
+    <lastmod>2013-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/om-en-mulig-handelsavtale-mellom-eu-og-usa/</loc>
+    <lastmod>2013-08-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/effekten-av-matfest-p%C3%A5-b%C3%B8rsen/</loc>
+    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/veit-du-hva-banken-din-gj%C3%B8r/</loc>
+    <lastmod>2013-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/slipp-bonden-fri-b%C3%B8r-vi-l%C3%A6re-av-danmark/</loc>
+    <lastmod>2013-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/biobr%C3%A4nsle-eller-mat-ett-dilemma-att-l%C3%B6sa/</loc>
+    <lastmod>2013-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/ukens-anbefaling-to-tekster-om-forskningsbasert-policy/</loc>
+    <lastmod>2012-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/masteroppgave-del-2-aktualitet-og-hva-jeg-skrev-om-egentlig/</loc>
+    <lastmod>2012-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/masteroppgaven-del-1-f%C3%B8rer-innvandring-til-velferdsdualisme/</loc>
+    <lastmod>2012-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/norske-oljeerfaringer-og-ressursenes-forbannelse/</loc>
+    <lastmod>2012-04-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/v%C3%A6r-en-robin-hood-finansminister-johnsen/</loc>
+    <lastmod>2011-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/innf%C3%B8ringsartikkel-om-wto/</loc>
+    <lastmod>2011-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/kritisk-journalistikk-og-den-femte-statsmakt-kritisk-borgerjournalistikk/</loc>
+    <lastmod>2011-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/generasjon-praktikum/</loc>
+    <lastmod>2011-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/agrianalyse/</loc>
+    <lastmod>2013-08-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/arbeidsmarked/</loc>
+    <lastmod>2011-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/arbeidsmarked/</loc>
+    <lastmod>2011-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/attac/</loc>
+    <lastmod>2013-02-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <lastmod>2011-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/evidensbasert-policy/</loc>
+    <lastmod>2012-09-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/finans/</loc>
+    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/finans/</loc>
+    <lastmod>2013-02-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/handelspolitikk/</loc>
+    <lastmod>2013-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/handelspolitikk/</loc>
+    <lastmod>2011-10-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/innvandring/</loc>
+    <lastmod>2012-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/journalisme/</loc>
+    <lastmod>2011-09-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/landbruk/</loc>
+    <lastmod>2013-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -46,7 +199,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-12-26T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -69,6 +222,18 @@
   </url>
   
   <url>
+    <loc>/tags/statsvitenskap/</loc>
+    <lastmod>2012-09-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/studier/</loc>
+    <lastmod>2012-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -76,7 +241,19 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <lastmod>2013-08-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/valg/</loc>
+    <lastmod>2013-09-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/%C3%B8konomi/</loc>
+    <lastmod>2012-04-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

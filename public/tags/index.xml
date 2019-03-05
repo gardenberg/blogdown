@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Agrianalyse</title>
+      <link>/tags/agrianalyse/</link>
+      <pubDate>Tue, 20 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/agrianalyse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arbeidsmarked</title>
+      <link>/tags/arbeidsmarked/</link>
+      <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/arbeidsmarked/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Attac</title>
+      <link>/tags/attac/</link>
+      <pubDate>Wed, 27 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/attac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Finans</title>
+      <link>/tags/finans/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/finans/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Handelspolitikk</title>
+      <link>/tags/handelspolitikk/</link>
+      <pubDate>Wed, 07 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/handelspolitikk/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Plot</title>
@@ -35,6 +80,24 @@
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/tags/regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statsvitenskap</title>
+      <link>/tags/statsvitenskap/</link>
+      <pubDate>Sun, 23 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/statsvitenskap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Studier</title>
+      <link>/tags/studier/</link>
+      <pubDate>Sun, 05 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/studier/</guid>
       <description></description>
     </item>
     

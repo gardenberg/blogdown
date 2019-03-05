@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Valg on Suppe og analyse</title>
+    <link>/categories/valg/</link>
+    <description>Recent content in Valg on Suppe og analyse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/valg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hvordan fordeles mandater ved stortingsvalg?</title>
+      <link>/post/hvordan-fordeles-mandater-ved-stortingsvalg/</link>
+      <pubDate>Tue, 03 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hvordan-fordeles-mandater-ved-stortingsvalg/</guid>
+      <description>Demokrati er som vi alle veit vanskelig på flere plan – ikke minst når en snakker om praktisk gjennomføring. For hvordan fungerer egentlig Stortingsvalget? Med kun seks små dager igjen til valget, kan det være greit å ta noen skritt tilbake og huske på hvordan et valg faktisk ser ut.
+For det første: Alle som stemmer, stemmer i fylket hvor de er folkeregistrerte. Osloborgere velger en liste fra et parti som stiller til valg i Oslo, trøndere velger på lister som stilles i Sør- eller Nord-Trøndelag.</description>
+    </item>
+    
+  </channel>
+</rss>

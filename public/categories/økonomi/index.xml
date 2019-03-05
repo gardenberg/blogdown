@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Økonomi on Suppe og analyse</title>
+    <link>/categories/%C3%B8konomi/</link>
+    <description>Recent content in Økonomi on Suppe og analyse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Apr 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%C3%B8konomi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Norske oljeerfaringer og ressursenes forbannelse</title>
+      <link>/post/norske-oljeerfaringer-og-ressursenes-forbannelse/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/post/norske-oljeerfaringer-og-ressursenes-forbannelse/</guid>
+      <description>serien tidligere publiserte artikler har jeg nå nok en gang skrevet for Attac Norges magasin Utveier. Sist nummer tok for seg klimarettferdighet, med fokus på utfordringer, ødeleggelser og, som vanlig, noen utveier. Jeg hadde gleden av å skrive en artikkel om norske oljeerfaringer.
+Jeg fokuserte på ressursenes forbannelse, hvorvidt norske erfaringer med oljeutvinning kan være til hjelp for land i det globale sør, og hvordan dette passer inn i fokuset på oljen som en bransje med store utofordringer hva gjelder effekter på miljø og klima.</description>
+    </item>
+    
+  </channel>
+</rss>

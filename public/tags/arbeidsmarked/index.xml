@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arbeidsmarked on Suppe og analyse</title>
+    <link>/tags/arbeidsmarked/</link>
+    <description>Recent content in Arbeidsmarked on Suppe og analyse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 26 Aug 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/arbeidsmarked/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generasjon Praktikum</title>
+      <link>/post/generasjon-praktikum/</link>
+      <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/post/generasjon-praktikum/</guid>
+      <description>Praktikum (n). Subst., praksis (m), praksisperiode (m), praktikanttjeneste (m) (1). Et praksisopphold mange tyske studenter må gjennom for å få godkjent gradene sine, måtte det være bachelor- eller mastergrad, eller noe mer utdatert som magister eller diplom. Mange som ikke må p.g.a. studiet gjør det allikevel for å få hardt tiltrengt arbeidserfaring i et land hvor arbeidsløsheten de siste tolv månedene har ligget på rundt 7% (og underansettelsen på over 10%) (Kilde: SpiegelOnline)</description>
+    </item>
+    
+  </channel>
+</rss>
