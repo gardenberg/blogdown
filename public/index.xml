@@ -6,10 +6,20 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grunnleggende overlevelsesanalyse</title>
+      <link>/post/grunnleggende-overlevelsesanalyse/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/grunnleggende-overlevelsesanalyse/</guid>
+      <description>Overlevelsesanalyse, eller survival, eller event history analysis er en analyse av tid-til-hendelse (time-to-event). Med denne metoden kan en estimere sannsynligheten for at en hendelse vil inntreffe på tidspunkt T. Det er ikke bare overlevelse eller død dette egner seg for, men de fleste ulike typer hendelse. Det klassiske ikke-sykdomseksempelet ser ut til å være tidspunkt for når en maskin bryter sammen (eller dør, om du vil).
+Den følgende teksten er inspirert av “Steps to perform survival analysis in R og MainDonald og Braun (2003) “Data analysis and graphics using R”.</description>
+    </item>
     
     <item>
       <title>Om meg</title>
