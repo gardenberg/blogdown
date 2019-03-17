@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grunnleggende ggplot2 - andeler fylkeskommunale utgifter</title>
+      <link>/post/grunnleggende-ggplot2/</link>
+      <pubDate>Sun, 17 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/grunnleggende-ggplot2/</guid>
+      <description>Interessert i å lære grunnleggende R-koding og visualisering? Det finnes dårligere ideer enn å kikke innom datacamp-kurset om beste praksis for visualisering.
+Selv om det er helt voldsomt mye gratis tilgjengelig et google-søk unna, betyr det også at det kan ta tid å luke ut det gode fra det vonde, skille snørr og kanel, og så videre. Dette kurset gir i hvert fall et inntrykk av å være basert på (primo 2019) “beste praksis”.</description>
+    </item>
     
     <item>
       <title>Grunnleggende overlevelsesanalyse</title>
