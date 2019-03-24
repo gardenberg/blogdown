@@ -12,6 +12,7 @@ tags:
 
 
 
+<p><strong>Hva handler denne artikkelen om?</strong> <em>ggplot2-kode for å visualisere andeler som kakediagram, vaffeldiagram og stabla søylediagram</em></p>
 <p>Interessert i å lære grunnleggende R-koding og visualisering? Det finnes dårligere ideer enn å kikke innom datacamp-kurset <a href="https://campus.datacamp.com/courses/visualization-best-practices-in-r/">om beste praksis for visualisering</a>.</p>
 <ul>
 <li>Selv om det er <strong>helt voldsomt mye gratis</strong> tilgjengelig et google-søk unna, betyr det også at det kan ta tid å luke ut det gode fra det vonde, skille snørr og kanel, og så videre. Dette kurset gir i hvert fall et inntrykk av å være basert på (primo 2019) “beste praksis”.</li>
@@ -27,6 +28,23 @@ tags:
 <li>stablede søylediagram: brukes hvis du vil ha en framvisning av andeler for inntil 3 kategorier for flere grupper.</li>
 </ul>
 <p>Så hva gjør du med andeler hvis du har flere enn 3 kategorier som du vil se for flere ulike grupper eller over tid? Da må du bare prøve deg fram.</p>
+<pre><code>## -- Attaching packages -------------------------------------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>## v ggplot2 3.1.0     v purrr   0.2.5
+## v tibble  1.4.2     v dplyr   0.7.8
+## v tidyr   0.8.2     v stringr 1.3.1
+## v readr   1.3.1     v forcats 0.3.0</code></pre>
+<pre><code>## -- Conflicts ----------------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre><code>## Warning: package &#39;PxWebApiData&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Loading required package: httr</code></pre>
+<pre><code>## Loading required package: rjstat</code></pre>
+<pre><code>## Loading required package: jsonlite</code></pre>
+<pre><code>## 
+## Attaching package: &#39;jsonlite&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     flatten</code></pre>
 <div id="eksempeldata-fra-ssbs-apne-api." class="section level3">
 <h3>Eksempeldata fra SSBs åpne API.</h3>
 <p>Eksempeldataene henter jeg fra ssb.no, hvor jeg ser at fylkeskommunale regnskapstall er tilgjengelig. Byråkrathurra! Jeg har ikke stor peiling på fylkeskommunale regnskap, men <a href="https://data.ssb.no/api/v0/no/console">ser</a> at en kan få ut brutto driftsutgifter fordelt på generelle tjenesteområder, for de ulike regionene. I disse regionreform-tider er vel fylkeskommunal pengebruk et hett tema? Kanskje ikke - jeg vil tippe det er mye vei, transport, videregående skole og kanskje littebitt tannlege her.</p>

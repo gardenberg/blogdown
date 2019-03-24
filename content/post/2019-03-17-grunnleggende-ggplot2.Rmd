@@ -10,6 +10,8 @@ tags:
   - ggplot2
 ---
 
+__Hva handler denne artikkelen om?__ _ggplot2-kode for å visualisere andeler som kakediagram, vaffeldiagram og stabla søylediagram_
+
 Interessert i å lære grunnleggende R-koding og visualisering? Det finnes dårligere ideer enn å kikke innom datacamp-kurset [om beste praksis for visualisering](https://campus.datacamp.com/courses/visualization-best-practices-in-r/). 
 
 - Selv om det er __helt voldsomt mye gratis__ tilgjengelig et google-søk unna, betyr det også at det kan ta tid å luke ut det gode fra det vonde, skille snørr og kanel, og så videre. Dette kurset gir i hvert fall et inntrykk av å være basert på (primo 2019) "beste praksis".
@@ -27,7 +29,7 @@ En vanlig feil i datavisualiseringer er å bruke teknikker ment for andelsdata, 
 
 Så hva gjør du med andeler hvis du har flere enn 3 kategorier som du vil se for flere ulike grupper eller over tid? Da må du bare prøve deg fram.
 
-```{r,include=FALSE}
+```{r,echo=FALSE}
 #pakker
 library(tidyverse)
 library(colorspace)
@@ -35,7 +37,7 @@ library(waffle)
 library(PxWebApiData)
 library(stringr)
 
-#valg
+#valg - et kjekt standard-tema for ggplot2
 theme_set(theme_minimal())
 ```
 ###Eksempeldata fra SSBs åpne API.

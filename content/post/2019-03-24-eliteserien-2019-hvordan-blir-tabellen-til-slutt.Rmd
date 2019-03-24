@@ -1,0 +1,13 @@
+---
+title: 'Eliteserien 2019 - hvordan blir tabellen til slutt?'
+author: Eivind
+date: '2019-03-24'
+slug: 'eliteserien-2019-hvordan-blir-tabellen-til-slutt'
+categories:
+  - R
+tags:
+  - fotball
+  - R
+---
+
+Fyll inn informasjon her når jeg får mer informasjon.
