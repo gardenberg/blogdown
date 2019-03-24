@@ -10,4 +10,30 @@ tags:
   - R
 ---
 
-Fyll inn informasjon her når jeg får mer informasjon.
+Hvert år arrangerer noen på kontoret en Eliteserie-tippeligakonkurranse. Jeg veit lite om fotball-lagene, og har aldri tippet noe særlig - men pleier å gjøre det greit, basert på andres harde arbeid: eksperter og odds.
+
+```{r}
+#biblioteker
+library(here)
+library(knitr)
+suppressPackageStartupMessages(library(tidyverse))
+
+#data
+df = read.csv2(here("content/data/tippeliga_2019.csv"),stringsAsFactors = FALSE, na.strings = "", nrows = 16)
+
+```
+
+Jeg har så langt ikke klart å finne stort med tippe-tips fra eksperter, men forventer at det kommer litt til helga. Så langt ser alle svært så enige ut. En oppdatering kommer da.
+
+```{r}
+kable(df)
+```
+
+```{r}
+#eksperiment med en heatmap-table
+temp = gather(df,kilde,plassering,NordicBet:Oddschecker)
+
+ggplot(data = temp, aes(x=as.factor(kilde), y = as.factor(Lag)))+
+  geom_tile(aes(fill = plassering))
+```
+

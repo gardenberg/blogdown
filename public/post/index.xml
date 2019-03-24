@@ -17,7 +17,8 @@
       <pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/eliteserien-2019-hvordan-blir-tabellen-til-slutt/</guid>
-      <description>Fyll inn informasjon her når jeg får mer informasjon.</description>
+      <description>Hvert år arrangerer noen på kontoret en Eliteserie-tippeligakonkurranse. Jeg veit lite om fotball-lagene, og har aldri tippet noe særlig - men pleier å gjøre det greit, basert på andres harde arbeid: eksperter og odds.
+#bibliotekerlibrary(here)## here() starts at C:/Users/Kauna/Documents/R/test_blogdownlibrary(knitr)suppressPackageStartupMessages(library(tidyverse))#datadf = read.csv2(here(&amp;quot;content/data/tippeliga_2019.csv&amp;quot;),stringsAsFactors = FALSE, na.strings = &amp;quot;&amp;quot;, nrows = 16)Jeg har så langt ikke klart å finne stort med tippe-tips fra eksperter, men forventer at det kommer litt til helga.</description>
     </item>
     
     <item>

@@ -12,4 +12,145 @@ tags:
 
 
 
-<p>Fyll inn informasjon her når jeg får mer informasjon.</p>
+<p>Hvert år arrangerer noen på kontoret en Eliteserie-tippeligakonkurranse. Jeg veit lite om fotball-lagene, og har aldri tippet noe særlig - men pleier å gjøre det greit, basert på andres harde arbeid: eksperter og odds.</p>
+<pre class="r"><code>#biblioteker
+library(here)</code></pre>
+<pre><code>## here() starts at C:/Users/Kauna/Documents/R/test_blogdown</code></pre>
+<pre class="r"><code>library(knitr)
+suppressPackageStartupMessages(library(tidyverse))
+
+#data
+df = read.csv2(here(&quot;content/data/tippeliga_2019.csv&quot;),stringsAsFactors = FALSE, na.strings = &quot;&quot;, nrows = 16)</code></pre>
+<p>Jeg har så langt ikke klart å finne stort med tippe-tips fra eksperter, men forventer at det kommer litt til helga. Så langt ser alle svært så enige ut. En oppdatering kommer da.</p>
+<pre class="r"><code>kable(df)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Lag</th>
+<th align="right">NordicBet</th>
+<th align="right">Nettavisen</th>
+<th align="right">UniBet</th>
+<th align="right">Oddschecker</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Rosenborg</td>
+<td align="right">1</td>
+<td align="right">NA</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">Molde</td>
+<td align="right">2</td>
+<td align="right">NA</td>
+<td align="right">2</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="left">Brann</td>
+<td align="right">3</td>
+<td align="right">NA</td>
+<td align="right">4</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">Sarpsborg 08</td>
+<td align="right">3</td>
+<td align="right">NA</td>
+<td align="right">3</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">Vålerenga</td>
+<td align="right">5</td>
+<td align="right">NA</td>
+<td align="right">5</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">Strømsgodset</td>
+<td align="right">5</td>
+<td align="right">9</td>
+<td align="right">6</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="left">Haugesund</td>
+<td align="right">7</td>
+<td align="right">NA</td>
+<td align="right">7</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="left">Tromsø</td>
+<td align="right">9</td>
+<td align="right">11</td>
+<td align="right">8</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="left">Kristiansund BK</td>
+<td align="right">9</td>
+<td align="right">NA</td>
+<td align="right">8</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="left">Odd</td>
+<td align="right">8</td>
+<td align="right">8</td>
+<td align="right">10</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="left">Lillestrøm</td>
+<td align="right">9</td>
+<td align="right">10</td>
+<td align="right">10</td>
+<td align="right">11</td>
+</tr>
+<tr class="even">
+<td align="left">Bodø/Glimt</td>
+<td align="right">13</td>
+<td align="right">15</td>
+<td align="right">10</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">Viking</td>
+<td align="right">12</td>
+<td align="right">14</td>
+<td align="right">13</td>
+<td align="right">13</td>
+</tr>
+<tr class="even">
+<td align="left">Stabæk</td>
+<td align="right">13</td>
+<td align="right">13</td>
+<td align="right">13</td>
+<td align="right">14</td>
+</tr>
+<tr class="odd">
+<td align="left">Ranheim</td>
+<td align="right">13</td>
+<td align="right">12</td>
+<td align="right">13</td>
+<td align="right">15</td>
+</tr>
+<tr class="even">
+<td align="left">Mjøndalen</td>
+<td align="right">16</td>
+<td align="right">16</td>
+<td align="right">16</td>
+<td align="right">16</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>#eksperiment med en heatmap-table
+temp = gather(df,kilde,plassering,NordicBet:Oddschecker)
+
+ggplot(data = temp, aes(x=as.factor(kilde), y = as.factor(Lag)))+
+  geom_tile(aes(fill = plassering))</code></pre>
+<p><img src="/post/2019-03-24-eliteserien-2019-hvordan-blir-tabellen-til-slutt_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>

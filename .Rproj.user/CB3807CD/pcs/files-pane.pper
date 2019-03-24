@@ -1,6 +1,10 @@
 {
-    "path" : "~/R/vizualisation_best_practice",
+    "path" : "~/R/test_blogdown/content/post",
     "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 4
+        },
         {
             "ascending" : true,
             "columnIndex" : 2
