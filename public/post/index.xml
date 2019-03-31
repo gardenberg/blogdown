@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,11 @@
     <item>
       <title>Eliteserien 2019 - hvordan blir tabellen til slutt?</title>
       <link>/post/eliteserien-2019-hvordan-blir-tabellen-til-slutt/</link>
-      <pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/eliteserien-2019-hvordan-blir-tabellen-til-slutt/</guid>
       <description>Hvert år arrangerer noen på kontoret en Eliteserie-tippeligakonkurranse. Jeg veit lite om fotball-lagene, og har aldri tippet noe særlig - men pleier å gjøre det greit, basert på andres harde arbeid: eksperter og odds.
-#bibliotekerlibrary(here)## here() starts at C:/Users/Kauna/Documents/R/test_blogdownlibrary(knitr)suppressPackageStartupMessages(library(tidyverse))#datadf = read.csv2(here(&amp;quot;content/data/tippeliga_2019.csv&amp;quot;),stringsAsFactors = FALSE, na.strings = &amp;quot;&amp;quot;, nrows = 16)Jeg har så langt ikke klart å finne stort med tippe-tips fra eksperter, men forventer at det kommer litt til helga.</description>
+Her bruker jeg tidyverse, knitr og here-pakka, og en egenprodusert tabell over ulike tips til tabellplasseringer. Her har jeg også lagt på et superenkelt gjennomsnitt av lagene, for å ha noe å sortere dem etter.</description>
     </item>
     
     <item>
