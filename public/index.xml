@@ -6,10 +6,20 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data science på norsk?</title>
+      <link>/post/data-science-p%C3%A5-norsk/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/data-science-p%C3%A5-norsk/</guid>
+      <description>“Data science” eller datavitenskap er den nye vinen. Eller, det skulle man i hvert fall tro når til og med staten arrangerer fagforum for “kunstig intelligens og data science”. Men hva er det? Hva er det på norsk? Og er det viktig?
+Hva er datavitenskap?For det aller første, så er det åpenbart et engelsk begrep som klinger dårlig i norske ører. Jeg har imidlertid ikke funnet noen god norsk oversettelse så langt.</description>
+    </item>
     
     <item>
       <title>Eliteserien 2019 - hvordan blir tabellen til slutt?</title>
@@ -60,7 +70,7 @@ Den følgende teksten er inspirert av “Steps to perform survival analysis in R
       
       <guid>/om-meg/</guid>
       <description>Vi stoler på suppe. Alle andre må vise data.
-Litt “alltid personlig, aldri privat”-informasjon.</description>
+Som statsviter, data-entusiast og over gjennomsnittet glad i metoder - og suppe - gir sitatet mening. Jeg arbeider som prosjektleder i Integrerings- og mangfoldsdirektoratets analyseseksjon, hvor det analyseres, prosjekteres og rapporteres. Statistikk-sidene er jeg godt fornøgd med - og også den årlige rapporteringa om hvordan det Egentlig går med integreringa. Har tildiget jobbet med landbrukspolitikk, og skrevet bl.a. om Korn og krise.</description>
     </item>
     
     <item>

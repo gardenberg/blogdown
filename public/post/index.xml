@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data science på norsk?</title>
+      <link>/post/data-science-p%C3%A5-norsk/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/data-science-p%C3%A5-norsk/</guid>
+      <description>“Data science” eller datavitenskap er den nye vinen. Eller, det skulle man i hvert fall tro når til og med staten arrangerer fagforum for “kunstig intelligens og data science”. Men hva er det? Hva er det på norsk? Og er det viktig?
+Hva er datavitenskap?For det aller første, så er det åpenbart et engelsk begrep som klinger dårlig i norske ører. Jeg har imidlertid ikke funnet noen god norsk oversettelse så langt.</description>
+    </item>
     
     <item>
       <title>Eliteserien 2019 - hvordan blir tabellen til slutt?</title>
