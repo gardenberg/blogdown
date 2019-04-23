@@ -6,10 +6,20 @@
     <description>Recent content in Ggplot2 on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ggplot2 - antall og sammenlikning av kategorier</title>
+      <link>/post/ggplot2-antall-og-sammenlikning-av-kategorier/</link>
+      <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ggplot2-antall-og-sammenlikning-av-kategorier/</guid>
+      <description>Hva handler denne artikkelen om? Hvordan visualisere antall og sammenlikne kategorier med ggplot2 i R, ved hjelp av søylediagram og punktdiagram
+Vi har tidligere sett på hvordan andeler bør visualiseres. Denne gangen skal vi se på noe enda mer grunnleggende - antall. Veldig ofte er vi interessert i et enkelt tall eller en observasjon, for eksempel et gjennomsnitt eller en maksverdi. Vi ønsker også å sammenlikne denne verdien på tvers av ulike kategorier, som kjønn, typer biler eller geografisk enhet.</description>
+    </item>
     
     <item>
       <title>Grunnleggende ggplot2 - andeler fylkeskommunale utgifter</title>
@@ -18,8 +28,7 @@
       
       <guid>/post/grunnleggende-ggplot2/</guid>
       <description>Hva handler denne artikkelen om? ggplot2-kode for å visualisere andeler som kakediagram, vaffeldiagram og stabla søylediagram
-Interessert i å lære grunnleggende R-koding og visualisering? Det finnes dårligere ideer enn å kikke innom datacamp-kurset om beste praksis for visualisering.
-Selv om det er helt voldsomt mye gratis tilgjengelig et google-søk unna, betyr det også at det kan ta tid å luke ut det gode fra det vonde, skille snørr og kanel, og så videre.</description>
+Interessert i å lære grunnleggende R-koding og visualisering? Det finnes dårligere ideer enn å kikke innom Datacamp-kurset [om beste praksis for visualisering]. Oppdatering: Bruk tida di et annet sted enn på DataCamp. Selskapet har problemer med seksuell trakasering, og rutinere for å håndtere det. R Weekly har noen lenker her og her om saken.</description>
     </item>
     
   </channel>
