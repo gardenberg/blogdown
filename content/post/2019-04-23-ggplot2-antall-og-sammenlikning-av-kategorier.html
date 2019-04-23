@@ -1,5 +1,5 @@
 ---
-title: ggplot2 - antall og sammenlikning av kategorier
+title: Visualiere antall og sammenlikne kategorier med ggplot2
 author: Eivind
 date: '2019-04-23'
 slug: ggplot2-antall-og-sammenlikning-av-kategorier
@@ -18,7 +18,7 @@ tags:
 <pre><code>## Warning: package &#39;PxWebApiData&#39; was built under R version 3.5.3</code></pre>
 <div id="eksempeldata-fra-ssbs-apne-api." class="section level3">
 <h3>Eksempeldata fra SSBs åpne API.</h3>
-<p>Også denne gangen bruker vi eksempeldata fra SSB. Ut ifra publiseringsoversikten ser jeg at det nylig er lagt ut kulturstatistikk, også dette fra KOSTR. Besøk på folkebibliotek i landets kommuner fra 2015 til 2018 kan kanskje være interessant.</p>
+<p>Også denne gangen bruker vi eksempeldata fra SSB. Ut ifra publiseringsoversikten ser jeg at det nylig er lagt ut kulturstatistikk, også dette fra KOSTRA. Besøk på folkebibliotek i landets kommuner fra 2015 til 2018 kan kanskje være interessant.</p>
 <pre class="r"><code>alle_data = ApiData(&quot;https://data.ssb.no/api/v0/no/table/12060&quot;,
              KOKkommuneregion0000 = TRUE,
              ContentsCode = &quot;KOSbesokbiblinnb0000&quot;,
@@ -34,12 +34,7 @@ df &lt;- alle_data[[1]] %&gt;%
 <h2>Stolpediagram / søylediagram</h2>
 <p>Disse figurene er superenkle. For mange er dette standard-diagrammet en tenker på, når en tenker på en graf. De er lettvinte å lage, og ofte lette å forstå - for svært mange. <strong>Men:</strong> hvis kakediagram er mer nyttig enn ryktet tilsier, så er søyler mindre nyttige en ryktet. Mer om det om litt.</p>
 <p>Ggplot2 har to geoms for søylediagram: geom_bar og geom_col. geom_col er for bruk når du har tallet som skal mappes, mens geom_bar inkluderer en beregning.</p>
-<p>Med geom_col kan vi se nærmere på de ti stedene med de høyeste besøkstallene (per innbygger) i 2017. Det er behov for to justeringer her:</p>
-<ul>
-<li>Søylediagram må alltid starte på 0. Dette er en av få absolutte regler i visualisering av data. Det skyldes at det vi gjør når vi leser et søylediagram, er å se på lengden av diagrammet. Hvis vi skal sammenlikne flere søyler, sammenlikner vi lengder. Hvis vi da starter på noe annet enn 0, får vi feil lengde. R håndterer dette automatisk for oss.</li>
-<li>Siden diagrammet får litt overplotting, må vi også rotere aksene for å lese alle kommunenavnene.</li>
-<li>Dataene bør alltid være fornuftig sortert, slik at de er lette for leseren å forstå. Siden dette er en topp-ti-liste, kan vi sortere dem fra stor til liten. Anbefalingen fra Grolemund og Wickhams <a href="https://r4ds.had.co.nz/factors.html#modifying-factor-order">R for Data Science</a> er å ta kompliserte omorganiseringer ut av ggplot-funksjonen og inn i en egen mutate-funksjon, for å gjøre koden lettere å lese-</li>
-</ul>
+<p>Med geom_col kan vi se nærmere på de ti stedene med de høyeste besøkstallene (per innbygger) i 2017.</p>
 <pre class="r"><code>temp = filter(df, `år`==&quot;2017&quot;) %&gt;%
   arrange(., desc(value)) %&gt;%
   slice(., 1:10) %&gt;%
@@ -51,7 +46,12 @@ ggplot(data = temp, aes(x = region, y = value))+
   labs(title =&quot;Lesehestene i Stjørdal besøkte folkebiblioteket mest&quot;, subtitle =&quot;I gjennomsnitt 24 ganger i 2017&quot;, x = &quot;Antall besøk per innbygger&quot;, y = &quot;Kommune&quot;)</code></pre>
 <p><img src="/post/2019-04-23-ggplot2-antall-og-sammenlikning-av-kategorier_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>Stjørdal kommune har altså flest besøk i folkebiblioteket per innbygger, med 24 besøk i 2017.</p>
-<p>Geom_bar er designa for å kunne gjøre litt beregninger og opptellinger selv. Standardinnstillingen er å telle opp antallet observasjoner for hver x-posisjon - i tilfellet over er det region. Den tar også et vekt-argument, som bestemmer hvor mye hver observasjon skal telle med. Dermed kan vi kjapt se hvem som har størst summert gjennomsnittlig besøk blant de 10 første kommunene (over de fire siste årene)</p>
+<ul>
+<li>Søylediagram må alltid starte på 0. Dette er en av få absolutte regler i visualisering av data. Det skyldes at det vi gjør når vi leser et søylediagram, er å se på lengden av diagrammet. Hvis vi skal sammenlikne flere søyler, sammenlikner vi lengder. Hvis vi da starter på noe annet enn 0, får vi feil lengde. R håndterer dette automatisk for oss.</li>
+<li>Siden diagrammet får litt overplotting, må vi også rotere aksene for å lese alle kommunenavnene.</li>
+<li>Dataene bør alltid være fornuftig sortert, slik at de er lette for leseren å forstå. Siden dette er en topp-ti-liste, kan vi sortere dem fra stor til liten. Anbefalingen fra Grolemund og Wickhams <a href="https://r4ds.had.co.nz/factors.html#modifying-factor-order">R for Data Science</a> er å ta kompliserte omorganiseringer ut av ggplot-funksjonen og inn i en egen mutate-funksjon, for å gjøre koden lettere å lese-</li>
+</ul>
+<p>Geom_bar er en funksjon som gjør litt beregninger og opptellinger selv. Standardinnstillingen er å telle opp antallet observasjoner for hver x-posisjon - i tilfellet over er det region. Den tar også et vekt-argument, som bestemmer hvor mye hver observasjon skal telle med. Dermed kan vi kjapt se hvem som har størst summert gjennomsnittlig besøk blant de 10 første kommunene (over de fire siste årene)</p>
 <pre class="r"><code>#geom_bar
 temp = mutate(df, region = as.factor(region)) %&gt;%
   slice(1:40)

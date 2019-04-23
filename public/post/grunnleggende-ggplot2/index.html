@@ -14,7 +14,7 @@
   <title>
     
     
-     Grunnleggende ggplot2 - andeler fylkeskommunale utgifter 
+     Visualisere andeler med ggplot2 
     
   </title>
   <link rel="canonical" href="/post/grunnleggende-ggplot2/">
@@ -43,10 +43,10 @@
 
 
 <section id=content>
-  <h1> Grunnleggende ggplot2 - andeler fylkeskommunale utgifter </h1>
+  <h1> Visualisere andeler med ggplot2 </h1>
 
   <div id=sub-header>
-    Eivind · 2019/03/17 · 7 minute read
+    Eivind · 2019/03/17 · 6 minute read
   </div>
 
   <div class="entry-content">
@@ -54,16 +54,7 @@
 
 
 <p><strong>Hva handler denne artikkelen om?</strong> <em>ggplot2-kode for å visualisere andeler som kakediagram, vaffeldiagram og stabla søylediagram</em></p>
-<p>Interessert i å lære grunnleggende R-koding og visualisering? Det finnes dårligere ideer enn å kikke innom Datacamp-kurset [om beste praksis for visualisering]. <strong>Oppdatering: Bruk tida di et annet sted enn på DataCamp</strong>. Selskapet har problemer med seksuell trakasering, og rutinere for å håndtere det. R Weekly har noen lenker <a href="https://rweekly.org/2019-15#datacamp">her</a> og <a href="https://rweekly.org/2019-16.html#datacamp">her</a> om saken. Det viser seg at DataCamp her prøver å løse et problem med en svært problematisk blogg, mens de burde endra policy. <a href="https://juliasilge.com/blog/datacamp-misconduct/">Julia Silge</a> og <a href="https://noamross.github.io/datacamp-sexual-assault/">RStudio</a> er blant de som har reagert - for ikke å glemme instruktøren for kurset jeg lenker til over, Nick Strayer.</p>
-<p>Strayer har har via <a href="https://twitter.com/NicholasStrayer/status/1117825231094206469?ref_src=twsrc%5Etfw">Twitter</a> oppfordra folk til å gå et annet sted. Han anbefaler Claus Wilkes bok <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Vizualization</a>, som er åpent tilgjengelig på internett (via bookdown). Jeg har ikke sett på denne boka, men den ser ut til å oppfylle kravene mine for et godt visualiseringskurs:</p>
-<ul>
-<li>Det må være kunnskapsbasert. Selv om det er <strong>helt voldsomt mye gratis</strong> tilgjengelig et google-søk unna, betyr det også at det kan ta tid å luke ut det gode fra det vonde, skille snørr og kanel, og så videre. Når du skal velge et kurs, pass på at kurset har referanser til ny forskningslitteratur og en begrunna “beste praksis”.</li>
-<li>Det må være oppdatert. Etter hvert begynner en del tutorials å bli utdaterte. Særlig ggplot2 og tidyverse har utvikla seg med årene, og tidlige eksempler bruker gjerne bare base-funksjoner (uten at jeg skal starte <a href="https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/">den diskusjonen</a>).</li>
-</ul>
-<p>Her er en kort oppsummering av det jeg plukka med meg om:</p>
-<div id="hvordan-vise-fram-andeler-av-et-hele" class="section level1">
-<h1>Hvordan vise fram andeler av et hele</h1>
-<p>En vanlig feil i datavisualiseringer er å bruke teknikker ment for andelsdata, på data som ikke er andeler. Visualiseringer som kurset diskuterer for å vise andeler er</p>
+<p>En vanlig feil i datavisualiseringer er å bruke teknikker ment for andelsdata, på data som ikke er andeler. Visualiseringer som er egna for andeler er blant annet:</p>
 <ul>
 <li>kakediagram/paidiagram: brukes når du vil ha en kompakt framvisning av andeler for inntil 3 kategorier på en variabel.</li>
 <li>vaffeldiagram: brukes hvis du vil ha framvisning av andeler for flere enn 3 kategorier på en variabel</li>
@@ -178,13 +169,12 @@ ggplot(data=temp)+
 <p>Oslo er et særtilfelle, som gjør figurverdien misvisende - andelene utgifter i fylket summerer til 11 prosent, i motsetning til de fleste andre. Men position=“fill” gjør at alle settes til å fylle opp til 100 % i figuren.</p>
 <p>Hva lærer vi av dette? Kanskje ikke så mye. Noen fylker ligger over landssnittet på 44 % av utgiftene til videregående, og noen ligger ganske langt under - og da er det hovedsaklig samferdsel som tar plassen som største utgiftspost. At det dermed er flate Østlands- og sørlandsfylker som bruker en større del på videregående, og vestlands- og Nord-Norge som bruker mer på samferdsel virker intuitivt rimelig.</p>
 </div>
-</div>
 
   </div>
 
   <div id=links>
     
-      <a class="basic-alignment left" href="/post/grunnleggende-overlevelsesanalyse/">&laquo; Grunnleggende overlevelsesanalyse</a>
+      <a class="basic-alignment left" href="/post/hvordan-l%C3%A6re-datavisualisering/">&laquo; Hvordan lære datavisualisering?</a>
     
     
       <a class="basic-alignment left" href="/post/noen-eksempler-p%C3%A5-bruk-av-imdis-api/">Noen eksempler på bruk av IMDis API &raquo;</a>
