@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/fordelinger-og-sfo-deltakelse-ggplot2/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/ggplot2-antall-og-sammenlikning-av-kategorier/</loc>
     <lastmod>2019-04-23T00:00:00+00:00</lastmod>
   </url>
@@ -276,19 +281,19 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-04-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-04-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2019-03-31T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -301,6 +306,12 @@
   <url>
     <loc>/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ssb/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -318,7 +329,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-04-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,20 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fordelinger og SFO-deltakelse [ggplot2]</title>
+      <link>/post/fordelinger-og-sfo-deltakelse-ggplot2/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/fordelinger-og-sfo-deltakelse-ggplot2/</guid>
+      <description>Hva handler denne artikkelen om? Hvordan visualisere fordelinger på tvers av kategorier, og deltakelse i skolefritidsordninga i norske kommuner
+Det har vært en del oppstuss rundt skolefritidsordninga - SFO, eller AKS her i Oslo - de siste dagene. NTNU Samfunnsforskning har levert en evalueringsrapport som i følge NRK peker på enorme forskjer i pris og tilbud. Det er særlig en NTB-melding som har blitt trykt opp rundt omkring, i følge med en datavisualisering fra nyhetsgrafikk.</description>
+    </item>
     
     <item>
       <title>Visualiere antall og sammenlikne kategorier med ggplot2</title>
