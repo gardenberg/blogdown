@@ -53,8 +53,6 @@ Gartner har utvikla en "hype cycle", som ([i følge dem selv](https://www.gartne
 
 ![Gartner hype cycle - from trigger through peak expectations, trough of disillusionment, onto the plateau of realism](/post/2019-04-05-data-science-på-norsk_files/gartner_hype_cycle.png)
 
-![Gartner hype cycle - from trigger through peak expectations, trough of disillusionment, onto the plateau of realism](/content/photo/gartner_hype_cycle.png)
-
 Hvor er vi nå? Antakeligvis på hype-stedet fortsatt, i hvert fall i amerikansk forstand. Men hva med Norge? I 2017 starta UMB på Ås som første norske universitet en master i datavitenskap. Ser du på et [google-søk](https://www.google.com/search?q=%22data+science%22&client=firefox-b-d&tbm=nws&source=lnt&tbs=lr:lang_1no&lr=lang_no&sa=X&ved=0ahUKEwjq1_r4ocvhAhVusYsKHQNkDRcQpwUIIA&biw=1536&bih=728&dpr=1.25) også her, ser det ut til å være godt diskutert i diverse medier og bransjeblader de siste årene.
 
 #Trender i utlysninger?
