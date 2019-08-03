@@ -37,7 +37,7 @@ theme_set(theme_minimal())
 ###Datagrunnlaget
 SFO-deltakelse hentes fra SSBs statistikkbank (KOSTRA), tabell 11975. Den gir oss andel av barn fra og med 6 år til og med 9 år som i 2018 brukte kommunal eller privat SFO i en kommune. Dataene hentes fra APIet hos SSB.
 
-Hva vil det si at noen bor i en by? I Norge er det ingen offisiell definisjon av en by - det eneste er en gammel veiledende definisjon fra 1997, som tilsier at en kommune med 5000 innbyggere og "sentrale tjenester" kan kalle seg by. Et mål på hva som er en by finner vi derfor i SSBs [sentralitetsindeks] (https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene). Denne indeksen sier noe om hvor mange arbeidsplasser og servicetjenester folk i kommunen kan nå med bil på 90 minutter. Dette er målet vårt på hvor urbant du bor.
+Hva vil det si at noen bor i en by? I Norge er det ingen offisiell definisjon av en by - det eneste er en gammel veiledende definisjon fra 1997, som tilsier at en kommune med 5000 innbyggere og "sentrale tjenester" kan kalle seg by. Et mål på hva som er en by finner vi derfor i SSBs [sentralitetsindeks](https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene). Denne indeksen sier noe om hvor mange arbeidsplasser og servicetjenester folk i kommunen kan nå med bil på 90 minutter. Dette er målet vårt på hvor urbant du bor.
 
 ```{r}
 #SFO

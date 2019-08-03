@@ -24,7 +24,7 @@ tags:
 <div id="datagrunnlaget" class="section level3">
 <h3>Datagrunnlaget</h3>
 <p>SFO-deltakelse hentes fra SSBs statistikkbank (KOSTRA), tabell 11975. Den gir oss andel av barn fra og med 6 år til og med 9 år som i 2018 brukte kommunal eller privat SFO i en kommune. Dataene hentes fra APIet hos SSB.</p>
-<p>Hva vil det si at noen bor i en by? I Norge er det ingen offisiell definisjon av en by - det eneste er en gammel veiledende definisjon fra 1997, som tilsier at en kommune med 5000 innbyggere og “sentrale tjenester” kan kalle seg by. Et mål på hva som er en by finner vi derfor i SSBs [sentralitetsindeks] (<a href="https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene" class="uri">https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene</a>). Denne indeksen sier noe om hvor mange arbeidsplasser og servicetjenester folk i kommunen kan nå med bil på 90 minutter. Dette er målet vårt på hvor urbant du bor.</p>
+<p>Hva vil det si at noen bor i en by? I Norge er det ingen offisiell definisjon av en by - det eneste er en gammel veiledende definisjon fra 1997, som tilsier at en kommune med 5000 innbyggere og “sentrale tjenester” kan kalle seg by. Et mål på hva som er en by finner vi derfor i SSBs <a href="https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene">sentralitetsindeks</a>. Denne indeksen sier noe om hvor mange arbeidsplasser og servicetjenester folk i kommunen kan nå med bil på 90 minutter. Dette er målet vårt på hvor urbant du bor.</p>
 <pre class="r"><code>#SFO
 sfo_data = ApiData(&quot;https://data.ssb.no/api/v0/no/table/11975&quot;,
                    KOKkommuneregion0000 = TRUE,
