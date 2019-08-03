@@ -55,29 +55,17 @@
 
 <p><strong>Hva handler denne artikkelen om?</strong> <em>Hvordan visualisere fordelinger på tvers av kategorier, og deltakelse i skolefritidsordninga i norske kommuner</em></p>
 <p>Det har vært en del oppstuss rundt skolefritidsordninga - SFO, eller AKS her i Oslo - de siste dagene. NTNU Samfunnsforskning har levert en evalueringsrapport som i følge NRK peker på <a href="https://www.nrk.no/troms/enorme-forskjeller-i-pris-og-tilbud-pa-sfo_-_-sann-skal-det-ikke-vaere-1.14643999">enorme forskjer i pris og tilbud</a>. Det er særlig en NTB-melding som har blitt trykt opp rundt omkring, i følge med en datavisualisering fra nyhetsgrafikk.no. Den skal være limt inn under.</p>
-<p>[sett inn bilde her]</p>
+<div class="figure">
+<img src="/post/2019-08-02-fordelinger-og-sfo-deltakelse-ggplot2_files/dagsavisen_010819.jpg" alt="Utklipp fra Dagsavisen 2. august 2019" style="width:40.0%" style="height:40.0%" />
+<p class="caption">Utklipp fra Dagsavisen 2. august 2019</p>
+</div>
 <p>Grafikken har masse informasjon, men er allikevel ikke spesielt informativ. Hvorfor ikke? Etter min mening prøver den å dekke over for mye på en gang. Tittelen antyder at den handler om at flest bybarn bruker SFO. Men figurene viser oss andel barn som bruker SFO etter fylke - og ikke byer vs. ikke-byer. Videre trekker den inn gjennomsnittlig månedspris på fylkesnivå, og de ti dyreste og billigste SFO-kommunene - og hvor disse ligger i landet. Altså heller ikke relatert til overskriften.</p>
 <p>Hva ville vært en bedre måte å vise dette på? Ved å angripe det som tittelen sier at grafikken skal si noe om - sammenhengen mellom å bo i by, og å bruke SFO.</p>
 <p>Under ser vi kjapt på noen enkle måter å visualisere fordelinger på, ved hjelp av R og GGplot2-biblioteket.</p>
-<pre><code>## Warning: package &#39;PxWebApiData&#39; was built under R version 3.5.3</code></pre>
-<pre><code>## Loading required package: httr</code></pre>
-<pre><code>## Loading required package: rjstat</code></pre>
-<pre><code>## Loading required package: jsonlite</code></pre>
-<pre><code>## 
-## Attaching package: &#39;jsonlite&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:purrr&#39;:
-## 
-##     flatten</code></pre>
-<pre><code>## here() starts at C:/Users/Kauna/Documents/R/test_blogdown</code></pre>
-<pre><code>## 
-## Attaching package: &#39;ggridges&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:ggplot2&#39;:
-## 
-##     scale_discrete_manual</code></pre>
 <div id="datagrunnlaget" class="section level3">
 <h3>Datagrunnlaget</h3>
-<p>SFO-deltakelse hentes fra SSBs statistikkbank (KOSTRA), tabell 11975. Den gir oss andel av barn fra og med 6 år til og med 9 år som i 2018 brukte kommunal eller privat SFO i en kommune.</p>
-<p>Sentralitetsindeksen hentes også fra <a href="https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene">SSB</a>. Denne indeksen sier noe om hvor mange arbeidsplasser og servicetjenester folk i kommunen kan nå med bil på 90 minutter. Dette er målet vårt på hvor urbant du bor.</p>
+<p>SFO-deltakelse hentes fra SSBs statistikkbank (KOSTRA), tabell 11975. Den gir oss andel av barn fra og med 6 år til og med 9 år som i 2018 brukte kommunal eller privat SFO i en kommune. Dataene hentes fra APIet hos SSB.</p>
+<p>Hva vil det si at noen bor i en by? I Norge er det ingen offisiell definisjon av en by - det eneste er en gammel veiledende definisjon fra 1997, som tilsier at en kommune med 5000 innbyggere og “sentrale tjenester” kan kalle seg by. Et mål på hva som er en by finner vi derfor i SSBs [sentralitetsindeks] (<a href="https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene" class="uri">https://www.ssb.no/befolkning/artikler-og-publikasjoner/ny-sentralitetsindeks-for-kommunene</a>). Denne indeksen sier noe om hvor mange arbeidsplasser og servicetjenester folk i kommunen kan nå med bil på 90 minutter. Dette er målet vårt på hvor urbant du bor.</p>
 <pre class="r"><code>#SFO
 sfo_data = ApiData(&quot;https://data.ssb.no/api/v0/no/table/11975&quot;,
                    KOKkommuneregion0000 = TRUE,
