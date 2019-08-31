@@ -6,10 +6,21 @@
     <description>Recent content in R on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hvordan lese ni partiprogram skikkelig fort? Tidytext-analyse av valgprogram</title>
+      <link>/post/tekstanalyse-av-valgprogram/</link>
+      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tekstanalyse-av-valgprogram/</guid>
+      <description>Hva handler denne artikkelen om? En kikk på valgprogrammene for kommunevalget i Oslo
+Det er høst, 2019, og på tide med LOKALVALG! En statsviters våte drøm? Ikke egentlig - plutselig får en spørsmål om Dhonts metode og slikt som en ikke lenger husker. Men det en kan gjøre er å sette seg inn i partiprogram, og diskutere hvem som er best.
+Det er ikke så lett. Alle mener selvsagt at de er best, og snakker av en eller anna grunn neste bare om ting en ikke kan være uenig i.</description>
+    </item>
     
     <item>
       <title>Fordelinger og SFO-deltakelse [ggplot2]</title>
