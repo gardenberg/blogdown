@@ -1,0 +1,59 @@
+---
+title: Stemningsanalyse
+author: Eivind
+date: '2019-09-04'
+slug: tema-analyse
+categories:
+  - R
+tags: []
+---
+
+
+
+```{r, warning = FALSE, message = FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+library(tidytext)
+library(here)
+library(tm)
+
+#settings
+theme_set(theme_minimal())
+set.seed(1106)
+```
+
+##Datagrunnlaget
+Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende. 
+
+Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, ...). 
+
+##Datagrunnlaget
+Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende. 
+
+Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, ...). 
+
+```{r, warning = FALSE, message = FALSE}
+#med TM
+mappe <- here("content/data/valgprogram")
+
+# lag et korpus fra pdf-filene
+converted <- VCorpus(DirSource(mappe), readerControl = list(reader = readPDF, language = "nb")) %>% 
+  DocumentTermMatrix(., control = list(language = "nb", 
+                                       removePunctuation = TRUE,
+                                       removeNumbers = TRUE,
+                                       stopwords = stopwords("no") #fjerner stoppord 
+                                       ))
+
+#opprydding
+#fjerner .pdf-suffixet
+df = tidy(converted) %>%
+  mutate(., document = gsub(".pdf", "", document, fixed = TRUE))
+
+#setter bedre navn på variablene
+names(df) = c("parti", "term", "antall")
+
+#sentiment-data
+#https://raw.githubusercontent.com/olavski/afinn/master/afinn/data/AFINN-no-165.txt
+
+
+```
+

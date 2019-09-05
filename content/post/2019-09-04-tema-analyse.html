@@ -1,0 +1,51 @@
+---
+title: Stemningsanalyse
+author: Eivind
+date: '2019-09-04'
+slug: tema-analyse
+categories:
+  - R
+tags: []
+---
+
+
+
+<pre class="r"><code>suppressPackageStartupMessages(library(tidyverse))
+library(tidytext)
+library(here)
+library(tm)
+
+#settings
+theme_set(theme_minimal())
+set.seed(1106)</code></pre>
+<div id="datagrunnlaget" class="section level2">
+<h2>Datagrunnlaget</h2>
+<p>Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.</p>
+<p>Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, …).</p>
+</div>
+<div id="datagrunnlaget-1" class="section level2">
+<h2>Datagrunnlaget</h2>
+<p>Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.</p>
+<p>Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, …).</p>
+<pre class="r"><code>#med TM
+mappe &lt;- here(&quot;content/data/valgprogram&quot;)
+
+# lag et korpus fra pdf-filene
+converted &lt;- VCorpus(DirSource(mappe), readerControl = list(reader = readPDF, language = &quot;nb&quot;)) %&gt;% 
+  DocumentTermMatrix(., control = list(language = &quot;nb&quot;, 
+                                       removePunctuation = TRUE,
+                                       removeNumbers = TRUE,
+                                       stopwords = stopwords(&quot;no&quot;) #fjerner stoppord 
+                                       ))
+
+#opprydding
+#fjerner .pdf-suffixet
+df = tidy(converted) %&gt;%
+  mutate(., document = gsub(&quot;.pdf&quot;, &quot;&quot;, document, fixed = TRUE))
+
+#setter bedre navn på variablene
+names(df) = c(&quot;parti&quot;, &quot;term&quot;, &quot;antall&quot;)
+
+#sentiment-data
+#https://raw.githubusercontent.com/olavski/afinn/master/afinn/data/AFINN-no-165.txt</code></pre>
+</div>

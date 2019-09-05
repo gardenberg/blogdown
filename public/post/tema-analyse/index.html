@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <title>
+    
+    
+     Stemningsanalyse 
+    
+  </title>
+  <link rel="canonical" href="/post/tema-analyse/">
+
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  
+</head>
+
+<body>
+<section id=nav>
+  <h1><a href="/">Suppe og analyse</a></h1>
+  <ul>
+    
+    <li><a href="/">Hjem</a></li>
+    
+    <li><a href="/om-meg/">Om meg</a></li>
+    
+    <li><a href="https://github.com/gardenberg">GitHub</a></li>
+    
+    <li><a href="/index.xml">RSS</a></li>
+    
+  </ul>
+</section>
+
+
+<section id=content>
+  <h1> Stemningsanalyse </h1>
+
+  <div id=sub-header>
+    Eivind · 2019/09/04 · 1 minute read
+  </div>
+
+  <div class="entry-content">
+    
+
+
+<pre class="r"><code>suppressPackageStartupMessages(library(tidyverse))
+library(tidytext)
+library(here)
+library(tm)
+
+#settings
+theme_set(theme_minimal())
+set.seed(1106)</code></pre>
+<div id="datagrunnlaget" class="section level2">
+<h2>Datagrunnlaget</h2>
+<p>Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.</p>
+<p>Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, …).</p>
+</div>
+<div id="datagrunnlaget-1" class="section level2">
+<h2>Datagrunnlaget</h2>
+<p>Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.</p>
+<p>Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, …).</p>
+<pre class="r"><code>#med TM
+mappe &lt;- here(&quot;content/data/valgprogram&quot;)
+
+# lag et korpus fra pdf-filene
+converted &lt;- VCorpus(DirSource(mappe), readerControl = list(reader = readPDF, language = &quot;nb&quot;)) %&gt;% 
+  DocumentTermMatrix(., control = list(language = &quot;nb&quot;, 
+                                       removePunctuation = TRUE,
+                                       removeNumbers = TRUE,
+                                       stopwords = stopwords(&quot;no&quot;) #fjerner stoppord 
+                                       ))
+
+#opprydding
+#fjerner .pdf-suffixet
+df = tidy(converted) %&gt;%
+  mutate(., document = gsub(&quot;.pdf&quot;, &quot;&quot;, document, fixed = TRUE))
+
+#setter bedre navn på variablene
+names(df) = c(&quot;parti&quot;, &quot;term&quot;, &quot;antall&quot;)
+
+#sentiment-data
+#https://raw.githubusercontent.com/olavski/afinn/master/afinn/data/AFINN-no-165.txt</code></pre>
+</div>
+
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="/post/tekstanalyse-av-valgprogram/">&laquo; Hvordan lese ni partiprogram skikkelig fort? Tidytext-analyse av valgprogram</a>
+    
+    
+  </div>
+</section>
+
+<section id="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = '';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+  
+
+
+</body>
+</html>
+
