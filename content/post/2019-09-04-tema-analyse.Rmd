@@ -1,5 +1,5 @@
 ---
-title: Stemningsanalyse
+title: Positive politikere eller negative nabolagsmasere? Stemningsanalyse av partiprogram
 author: Eivind
 date: '2019-09-04'
 slug: tema-analyse

@@ -14,7 +14,7 @@
   <title>
     
     
-     Stemningsanalyse 
+     Positive politikere eller negative nabolagsmasere? Stemningsanalyse av partiprogram 
     
   </title>
   <link rel="canonical" href="/post/tema-analyse/">
@@ -43,10 +43,10 @@
 
 
 <section id=content>
-  <h1> Stemningsanalyse </h1>
+  <h1> Positive politikere eller negative nabolagsmasere? Stemningsanalyse av partiprogram </h1>
 
   <div id=sub-header>
-    Eivind · 2019/09/04 · 1 minute read
+    Eivind · 2019/09/04 · 3 minute read
   </div>
 
   <div class="entry-content">
@@ -57,16 +57,12 @@
 library(tidytext)
 library(here)
 library(tm)
+library(ggridges)
 
 #settings
 theme_set(theme_minimal())
 set.seed(1106)</code></pre>
 <div id="datagrunnlaget" class="section level2">
-<h2>Datagrunnlaget</h2>
-<p>Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.</p>
-<p>Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, …).</p>
-</div>
-<div id="datagrunnlaget-1" class="section level2">
 <h2>Datagrunnlaget</h2>
 <p>Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.</p>
 <p>Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, …).</p>
@@ -83,14 +79,78 @@ converted &lt;- VCorpus(DirSource(mappe), readerControl = list(reader = readPDF,
 
 #opprydding
 #fjerner .pdf-suffixet
-df = tidy(converted) %&gt;%
+df_programmer = tidy(converted) %&gt;%
   mutate(., document = gsub(&quot;.pdf&quot;, &quot;&quot;, document, fixed = TRUE))
 
 #setter bedre navn på variablene
-names(df) = c(&quot;parti&quot;, &quot;term&quot;, &quot;antall&quot;)
+names(df_programmer) = c(&quot;parti&quot;, &quot;term&quot;, &quot;antall&quot;)
 
 #sentiment-data
-#https://raw.githubusercontent.com/olavski/afinn/master/afinn/data/AFINN-no-165.txt</code></pre>
+sentiment &lt;- read_delim(here(&quot;content/data/AFINN-no-165.txt&quot;), &quot;|&quot;, escape_double = FALSE, col_names = FALSE, trim_ws = TRUE)
+sentiment$verdi = parse_number(sentiment$X1)
+sentiment$tekst = gsub(pattern = &quot;[-][012345]|[012345]&quot;, replacement = &quot;&quot;, x = sentiment$X1)
+sentiment$tekst = gsub(pattern = &quot;\t&quot;, replacement = &quot;&quot;, x = sentiment$tekst)
+sentiment = select(sentiment, -X1)</code></pre>
+</div>
+<div id="hva-er-den-gjennomsnittlige-stemninga-i-tekstene" class="section level2">
+<h2>Hva er den gjennomsnittlige stemninga i tekstene?</h2>
+<pre class="r"><code>df = inner_join(sentiment, df_programmer, by = c(&quot;tekst&quot; = &quot;term&quot;))
+
+
+#en utfordring her er at vi blander verdien på en variabel og antallet observasjoner
+#bør ekspanderes
+
+df_utvida = uncount(df, antall)
+
+
+
+temp = count(df, tekst, sort = TRUE, wt = antall)
+temp</code></pre>
+<pre><code>## # A tibble: 644 x 2
+##    tekst      n
+##    &lt;chr&gt;  &lt;dbl&gt;
+##  1 sikre    503
+##  2 bedre    347
+##  3 styrke   323
+##  4 god      289
+##  5 rette    273
+##  6 ønsker   254
+##  7 viktig   243
+##  8 øke      187
+##  9 større   181
+## 10 godt     161
+## # ... with 634 more rows</code></pre>
+<p>Her er det mest brukt positive ord: “sikre”, “bedre”, “styrke”.</p>
+<pre class="r"><code>temp =  group_by(df_utvida, parti) %&gt;%
+  summarise(mean = mean(verdi))
+
+ggplot(data = temp) + 
+  geom_col(aes(x = fct_reorder(parti, mean), y = mean)) + 
+  coord_flip() + 
+  labs(title = &quot;Høyre og KrF er de mest positive&quot;, subtitle = &quot;Rødt og SV de mest negative&quot;, x = &quot;Parti&quot;, y = &quot;Gjennomsnittlig stemning&quot;)</code></pre>
+<p><img src="/post/2019-09-04-tema-analyse_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Med disse gjennomsnittene forsvinner mye av variasjonen.</p>
+<pre class="r"><code>ggplot(data = df_utvida, aes(x = fct_reorder(parti, verdi, .fun = mean), y = verdi)) + 
+  geom_jitter(colour = &quot;steelblue&quot;, alpha = 0.1) + 
+  geom_boxplot(alpha = 0.5) + 
+  coord_flip()</code></pre>
+<p><img src="/post/2019-09-04-tema-analyse_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Større variasjon i følelsene i FrP, SV og Rødt.</p>
+<pre class="r"><code>#skal telle opp antall ord assosisert med hver enkelt følelses-verdi
+temp = group_by(df_utvida, parti, verdi) %&gt;%
+  summarise(., antall = n()) %&gt;%
+  mutate(., andel = antall / sum(antall))
+
+ggplot(data = temp) +
+  geom_col(aes(x = verdi, y = andel)) +
+  facet_wrap(~parti)</code></pre>
+<p><img src="/post/2019-09-04-tema-analyse_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = df_utvida, aes(y = fct_reorder(parti, verdi, .fun = mean), x = verdi)) + 
+  geom_density_ridges(alpha = 0.7) + 
+  scale_x_continuous(limits = c(-5, 5), breaks = seq(from = -5, to = 5, by = 1), expand = c(0,0)) + 
+  theme(axis.ticks.y = element_blank())</code></pre>
+<pre><code>## Picking joint bandwidth of 0.241</code></pre>
+<p><img src="/post/2019-09-04-tema-analyse_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 
   </div>
@@ -125,6 +185,9 @@ names(df) = c(&quot;parti&quot;, &quot;term&quot;, &quot;antall&quot;)
 
   
   
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
 
 </body>

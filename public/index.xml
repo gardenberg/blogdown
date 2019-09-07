@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>Stemningsanalyse</title>
+      <title>Positive politikere eller negative nabolagsmasere? Stemningsanalyse av partiprogram</title>
       <link>/post/tema-analyse/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/tema-analyse/</guid>
-      <description>suppressPackageStartupMessages(library(tidyverse))library(tidytext)library(here)library(tm)#settingstheme_set(theme_minimal())set.seed(1106)DatagrunnlagetAlle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.
+      <description>suppressPackageStartupMessages(library(tidyverse))library(tidytext)library(here)library(tm)library(ggridges)#settingstheme_set(theme_minimal())set.seed(1106)DatagrunnlagetAlle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende.
 Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, …).
-DatagrunnlagetAlle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig.</description>
+#med TMmappe &amp;lt;- here(&amp;quot;content/data/valgprogram&amp;quot;)# lag et korpus fra pdf-fileneconverted &amp;lt;- VCorpus(DirSource(mappe), readerControl = list(reader = readPDF, language = &amp;quot;nb&amp;quot;)) %&amp;gt;% DocumentTermMatrix(.</description>
     </item>
     
     <item>
