@@ -15,16 +15,12 @@ suppressPackageStartupMessages(library(tidyverse))
 library(tidytext)
 library(here)
 library(tm)
+library(ggridges)
 
 #settings
 theme_set(theme_minimal())
 set.seed(1106)
 ```
-
-##Datagrunnlaget
-Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende. 
-
-Helt til slutt fjerner jeg også stoppord - 176 vanlige ord i det norske språket som jevnt over brukes mye (i, og, jeg, det, ...). 
 
 ##Datagrunnlaget
 Alle partiene har PDF-filer av valgprogrammene sine for Oslo tilgjengelig. PDF-filer lar seg lese inn, men krever litt tygging for å få fjerna punktsetting, nummer og lignende. 
@@ -45,15 +41,79 @@ converted <- VCorpus(DirSource(mappe), readerControl = list(reader = readPDF, la
 
 #opprydding
 #fjerner .pdf-suffixet
-df = tidy(converted) %>%
+df_programmer = tidy(converted) %>%
   mutate(., document = gsub(".pdf", "", document, fixed = TRUE))
 
 #setter bedre navn på variablene
-names(df) = c("parti", "term", "antall")
+names(df_programmer) = c("parti", "term", "antall")
 
 #sentiment-data
-#https://raw.githubusercontent.com/olavski/afinn/master/afinn/data/AFINN-no-165.txt
+sentiment <- read_delim(here("content/data/AFINN-no-165.txt"), "|", escape_double = FALSE, col_names = FALSE, trim_ws = TRUE)
+sentiment$verdi = parse_number(sentiment$X1)
+sentiment$tekst = gsub(pattern = "[-][012345]|[012345]", replacement = "", x = sentiment$X1)
+sentiment$tekst = gsub(pattern = "\t", replacement = "", x = sentiment$tekst)
+sentiment = select(sentiment, -X1)
+```
 
 
+
+##Hva er den gjennomsnittlige stemninga i tekstene?
+
+```{r}
+df = inner_join(sentiment, df_programmer, by = c("tekst" = "term"))
+
+
+#en utfordring her er at vi blander verdien på en variabel og antallet observasjoner
+#bør ekspanderes
+
+df_utvida = uncount(df, antall)
+
+
+
+temp = count(df, tekst, sort = TRUE, wt = antall)
+temp
+```
+
+Her er det mest brukt positive ord: "sikre", "bedre", "styrke".
+
+```{r}
+temp =  group_by(df_utvida, parti) %>%
+  summarise(mean = mean(verdi))
+
+ggplot(data = temp) + 
+  geom_col(aes(x = fct_reorder(parti, mean), y = mean)) + 
+  coord_flip() + 
+  labs(title = "Høyre og KrF er de mest positive", subtitle = "Rødt og SV de mest negative", x = "Parti", y = "Gjennomsnittlig stemning")
+```
+
+Med disse gjennomsnittene forsvinner mye av variasjonen.
+
+```{r}
+ggplot(data = df_utvida, aes(x = fct_reorder(parti, verdi, .fun = mean), y = verdi)) + 
+  geom_jitter(colour = "steelblue", alpha = 0.1) + 
+  geom_boxplot(alpha = 0.5) + 
+  coord_flip()
+```
+
+Større variasjon i følelsene i FrP, SV og Rødt. 
+
+```{r}
+#skal telle opp antall ord assosisert med hver enkelt følelses-verdi
+temp = group_by(df_utvida, parti, verdi) %>%
+  summarise(., antall = n()) %>%
+  mutate(., andel = antall / sum(antall))
+
+ggplot(data = temp) +
+  geom_col(aes(x = verdi, y = andel)) +
+  facet_wrap(~parti)
+
+```
+
+
+```{r}
+ggplot(data = df_utvida, aes(y = fct_reorder(parti, verdi, .fun = mean), x = verdi)) + 
+  geom_density_ridges(alpha = 0.7) + 
+  scale_x_continuous(limits = c(-5, 5), breaks = seq(from = -5, to = 5, by = 1), expand = c(0,0)) + 
+  theme(axis.ticks.y = element_blank())
 ```
 
