@@ -1,0 +1,233 @@
+---
+title: Kan en løpe raskere med R (RaskeR)?
+author: Eivind
+date: '2019-10-05'
+slug: kan-en-løpe-raskere-med-r-rasker
+categories:
+  - løping
+  - R
+tags:
+  - R
+---
+
+__Hva handler denne artikkelen om?__ _En første kikk på løpsdata fra de siste årenes løp_
+
+Inspirert av forrige artikkels kikk på tider fra de 19 løpene jeg har deltatt i de siste årene, begynte jeg å lure på hvordan treningsøktene mine ser ut? Jeg har de siste årene løpt rundt med både div. treningsapper på smarttelefonen med GPS-utstyr, og pulsmåler.  For tida er det Runtastic jeg bruker.  Kan en få tak i dataene sine fra en slik app?
+
+- Er det mulig å si noe generelt om hvordan jeg har trent over de siste årene? Kan jeg se noe mønster i når jeg har trent - og når jeg ikke har trent?
+- Hvor ofte har jeg klart å nå målet mitt om (minst) tre treningsøkter i uka? Jeg mistenker at det ikke er så ofte?
+- Er løpsdeltakelse noe jeg trener mot, eller noe jeg blir motivert til å trene av? Eller begge deler?
+
+#Dataene
+
+```{r, include = FALSE}
+library(tidyverse)
+library(lubridate)
+
+#settings
+theme_set(theme_minimal())
+set.seed(1106)
+options(scipen = 100)
+
+df <- read.csv2(here::here("content/data/runtastic/runtastic_1.csv"), stringsAsFactors=FALSE)
+```
+
+Ja, data kan man få tak i - viser det seg at svaret er. Med en dump fra Runtastic-sida får en ut masse informasjon, inkludert 
+
+- oppsummerende data for alle sessions som er registrert,
+- høydedata for hver enkelt session, 
+- GPS-data for hver enkelt session, og 
+- pulsmålingsdata for hver enkelt session.
+
+Jeg tok ut en dump per 22. september 2019. I utgangspunktet er - eller føles - mye av disse dataene nokså personsensitive - her er både posissjonsdata og pulsfrekvenser. Med 292 oppføringer er også mengden temmelig overveldende. Jeg begynner derfor med de oppsummerende dataene. Her er det 39 variabler, derunder start- og slutttid, tidspunkt for opprettelse, tidssone-informasjon, distanse, varighet, høydemeter, gjennomsnittlig fart, forbrente kalorier, maks og gjennomsnittlig puls, og diverse notater. Jeg tar ut et utvalg av dette, i første omgang - med 10 variabler
+
+```{r}
+glimpse(df)
+```
+
+Første utfordring er å finne ut hva tida og alt det andre her måles i. Etter litt roting oppdaget jeg at dette er lagret som antall tusendeler (mikrosekund?) siden 1. januar 1970:
+
+```{r}
+temp = df
+temp$time = as.POSIXct(temp$start_time/1000, origin="1970-01-01")
+knitr::kable(top_n(temp, 5))
+```
+
+En ekstra spennende øvelse her er jo at vi får sett nærmere på tid og datoer i R - en øvelse i seg selv. lubridate-pakken ser ut til å smøre arbeidet litt i et tidyverse-rammeverk, heldigvis.
+
+```{r}
+df = mutate(df, 
+            start_time = as.POSIXct(start_time/1000, origin="1970-01-01"),
+            end_time = as.POSIXct(end_time/1000, origin="1970-01-01"),
+         year = year(start_time),
+         month = month(start_time),
+         week = week(start_time),
+         duration_sec = round(duration/1000, 0),
+         duration_min = duration_sec/60,
+         duration_lubridate = as.duration(as.period(duration_sec, unit = "seconds")),
+         distance = distance / 1000, #konverterer distanse i meter til kilometer
+         duration_per_km_lubridate = as.duration(as.period(round(duration_per_km/1000, 0), unit = "seconds")),
+         duration_per_km = (duration_per_km/1000)/60,
+         puls_sone_snitt = cut(pulse_avg, breaks = c(0, 126, 141, 155, 170, 184, 210), labels = c("0", "Sone 1", "Sone 2", "Sone 3", "Sone 4", "Sone maks")),
+         puls_sone_maks = cut(pulse_max, breaks = c(0, 126, 141, 155, 170, 184, 210), labels = c("0", "Sone 1", "Sone 2", "Sone 3", "Sone 4", "Sone maks"))
+         )
+```
+
+#Hvordan har jeg trent de siste årene?
+
+Så hva er det vi har i disse 292 observasjonene her? For det første er antallet treningsaktiviteter forskjellig over årene. Den første registrerte aktiviteten kom i slutten av september 2015. I 2015 registrerte jeg 35 aktiviteter i appen, 2016 opp mot 65, før det var litt lavere igjen i 2017. Det er ingen registreringer mellom slutten av august 2017 og mars 2018. I 2018 kom jeg over 80 registrerte aktiviteter. 
+
+```{r}
+ggplot(data = df) + 
+  geom_bar(aes(x = year))
+```
+
+For å få en bedre forståelse av hva som ligger bak dette, er det greit å se på hvordan antallet aktiviteter varierer med tiden innafor et år: Er det sesongvariasjoner eller stabilitet i det som er registrert? Og kan jeg huske spesifikke hendelser som forklarer fall eller økning i aktivitet?
+
+```{r, include = FALSE}
+temp = group_by(df, month, year) %>%
+  summarise(antall = n()) %>%
+  ungroup() %>%
+  mutate(month = fct_recode(as.factor(month),
+                            januar = "1",
+                            februar = "2",
+                            mars = "3",
+                            april = "4",
+                            mai = "5",
+                            juni = "6",
+                            juli = "7",
+                            august = "8",
+                            september = "9",
+                            oktober = "10",
+                            november = "11",
+                            desember = "12"
+))
+
+temp2 = expand(temp, year, month)
+
+temp = left_join(temp2, temp) %>%
+  mutate(., antall = ifelse(is.na(antall), 0, antall))
+``` 
+
+- Jevn fart inn i 2016, med fortsatt 2-3 økter i måneden fram til juni, hvor det faller - og faller - og faller utover høsten og flater ut på en tur i måneden mot slutten av året. Det er det en åpenbar grunn til!
+- I 2017 starter jeg imidlertid sterkere, med 1-2 ganger per uka. Når sommeren er overstått, og etter august flater det imidlertid ut igjen. Barnehagestart og tilbake på jobb var tydeligvis hardt å få til.
+- Når mars 2018 kommer, da stiger imidlertid ambisjonene - og det ganske brått. Fra 0 (registrerte) aktiviteter, til opp imot 3 ganger i uka (den jevne målsettinga), som jeg også klarte å vedlikeholde på høsten og inn mot vinteren - selv om dyppen i desember er ganske så skummel...
+- 2019 starta også sterkt, relativt sett, men falt brått etter april. Da slo ny jobb og flytteprosjekt antakeligvis inn. I juli kom det et lite hoppp, ettersom joggeskoa ble med på ferie, men så klarte jeg ikke å holde dette oppe inn i høsten.
+
+```{r}
+ggplot(data = temp) + 
+  geom_line(aes(x = as.integer(month), y = antall, colour = as.factor(year))) +
+  scale_x_continuous(limits = c(1, 12), breaks = 1:12, minor_breaks = NULL) + 
+  scale_y_continuous(limits = c(0, 12), breaks = seq(from = 1, to = 12, by = 3), minor_breaks = NULL) + 
+  labs(x = "Måned", y = "Antall", colour = "År", title = "Løpshistorikk - et sammensurium", subtitle = "Diverse ting skjer - og da blir det mindre løping")
+```
+
+Og dermed sitter jeg igjen med en kompleks graf, og en kompleks historie.
+
+##Hvor langt har jeg løpt?
+Over disse øktene har jeg totalt løpt 2484 kilometer. Medianløpet er på 7,5 kilometer, det lengste løpet på 42,2 km (maraton!) - men 50 % av løpene er på mellom 6,5 kilometer og 10,2 kilometer. Histogrammet viser at det er langt flest løp på ca. 7 kilometer, fulgt av 10 og 6 kilometer. Dette er ikke spesielt ulikt for de ulike årene. I 2018 klarte jeg å løpe noe flere lengre løp, slik at medianen lå nærmere 10 kilometer. 
+
+```{r, echo = FALSE}
+qplot(data = df, x = distance, binwidth = 1)
+
+ggplot(data = df, aes(x = as.factor(year), y = distance)) + 
+  geom_boxplot() + 
+  geom_jitter(colour = "steelblue", alpha = 0.2)
+```
+
+##Hvor fort har jeg løpt?
+
+Det raskeste jeg har løpt er 3 min 20 sek på kilometeren. Medianhastigheten er 6 min per kilometer. For det meste har jeg løpt (i gjennomsnitt) på mellom 5 minutt og 30 sekund og 6 minutt og 30 sekund per kilometer. Fordelinga er ganske pen og symmetrisk. De konsistent raskeste tidene kom i 2018, hvor jeg også trente mer spesifikt mot å løpe raskere på ti-kilometer. 2019 har vært litt treigere, men ikke egentlig fullt så varierende som 2015-2017. Riktignok har vi ikke kommet helt inn i vintersesongen enda, noe som nok godt kan ha noe med dette å gjøre.
+
+```{r, echo = FALSE}
+temp = filter(df, duration_per_km < 15)
+
+qplot(data = temp, x = duration_per_km, binwidth = 0.25)
+
+ggplot(data = temp, aes(x = as.factor(year), y = duration_per_km)) + 
+  geom_boxplot() + 
+  geom_jitter(colour = "steelblue", alpha = 0.2)
+
+```
+
+##Hva med pulsen da?
+For en god del av turene mangler puls-data: For 92 av turene er gjennomsnittspulsen satt til 0, og for 76 er den manglende. Hovedforklaringa på manglende pulsdata er dermed Runtastic-bruken - jeg brukte Runkeeper og Polar-system før dette, og trodde jeg hadde fått importert over dataene. Men tydeligvis ikke. Det er heller ikke slik at dette er 100 % informativt - i noen tilfeller har jeg i lite motiverte perioder løpt uten pulsutstyr. Men også alle løp jeg har deltatt i, har jeg etterregistrert i appen - og noen ganger har pulsutstyret feila eller gått tom for batteri. Og det er svinvanskelig å bytte batteri på polar-utstyret uten å ødelegge noe. 
+
+Det gir oss 124 turer med pulsdata. Hvordan ser disse ut? Median-pulsen ligger på 152, 50 % av turene ligger mellom 148 og 156, og maks gjennomsnittlig puls er på 181. 2019-dataene har mer variasjon i pulsen. Hva vil dette si, siden puls er relativt til makspuls og hvilepuls? At det meste av treningen har foregått i pulssone 2, for fetbrenning, men også noe i aerob sone. 
+
+
+Makspulsen er derimot på 176 i snitt, og ligger i 50 % av tilfellene mellom 170 og 180. Den høyest målte pulsen er 199. Det vil si at jeg i de fleste løpene har vært oppe i pulssone 4, anaerob sone.
+
+```{r, echo = FALSE}
+temp = filter(df, pulse_avg != 0, is.na(df$pulse_avg) == FALSE)
+
+ggplot(data = temp, aes(x = as.factor(year), y = pulse_avg)) + 
+  geom_boxplot() + 
+  geom_jitter(colour = "steelblue", alpha = 0.2)
+
+ggplot(data = temp) + 
+  geom_bar(aes(x = puls_sone_snitt))
+
+ggplot(data = temp) + 
+  geom_bar(aes(x = puls_sone_maks))
+
+```
+
+
+#Hvor ofte har jeg klart målet om tre ganger i uka?
+
+ Jeg liker egentlig å tro at jeg trener ca. 3 ganger i uka. Hvor ofte har det vært tilfelle her? Ikke veldig ofte - men mer enn ingenting:
+
+```{r, echo = FALSE}
+temp = group_by(df, year, week) %>%
+  summarise(antall = n()) %>%
+  ungroup()
+
+temp = left_join(expand(temp, year, week = 1:52), temp) %>%
+  mutate(antall = ifelse(is.na(antall), 0, antall)) %>%
+  mutate(yearweek = ifelse(nchar(week) == 1, paste0(0, week), week),
+    yearweek = paste0(year, yearweek))
+
+ggplot(data = temp) + 
+  geom_bar(aes(x = antall)) + 
+  facet_wrap(vars(year)) + 
+  labs(x = "Antall turer i uka", y = "Antall uker", title = "Et stykke unna målet om 3 turer i uka")
+
+temp2 = group_by(temp, year, antall) %>%
+  summarise(antall_uker = n()) %>%
+  mutate(andel = antall_uker/52)
+
+ggplot(data = temp2) + 
+  geom_col(aes(x = antall, y = andel, fill = as.factor(year)), position = "dodge") + 
+  labs(x = "Antall aktiviteter per uke", y = "Andel uker hvert år", fill = "År", title = "Målet om tre aktiviteter nådd i 30 % av 2018")
+
+
+```
+
+#Er løpsdeltakelse noe jeg trener mot?
+eller noe jeg blir motivert til å trene av? Eller begge deler?
+
+```{r, include = FALSE}
+runs = read_delim(here::here("content/data/runs_sept2019.csv"), ";", escape_double = FALSE, col_types = cols(dato = col_character()), locale = locale(decimal_mark = ",", grouping_mark = "|", encoding = "ISO-8859-1"), trim_ws = TRUE)
+
+runs = mutate(runs, 
+              dato = as.POSIXct(dato, format = "%d.%m.%Y"),
+              year = year(dato),
+              tid_test = hms(tid),
+              tid_minutter = as.period(tid_test, unit = "minutes")
+              )
+
+temp = select(df, dato = start_time, distanse_km = distance, minutter = duration_min, `min/km` = duration_per_km)
+
+temp = bind_rows(trening = temp, løp = select(runs, dato, distanse_km, minutter, `min/km`), .id = "treningsform")
+
+temp = filter(temp, dato > "2015-01-01")
+
+```
+
+```{r}
+ggplot(data = temp) + 
+  geom_point(aes(x = dato, y = distanse_km, colour = treningsform))
+```
+
+Det er vanskelig å si. Løpene er mer lagt til vår og høst, enn at de i seg selv påvirker treningsinnsatsen betydelig.

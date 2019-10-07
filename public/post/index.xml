@@ -6,10 +6,32 @@
     <description>Recent content in Posts on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kan en løpe raskere med R (RaskeR)?</title>
+      <link>/post/kan-en-l%C3%B8pe-raskere-med-r-rasker/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/kan-en-l%C3%B8pe-raskere-med-r-rasker/</guid>
+      <description>Hva handler denne artikkelen om? En første kikk på løpsdata fra de siste årenes løp
+Inspirert av forrige artikkels kikk på tider fra de 19 løpene jeg har deltatt i de siste årene, begynte jeg å lure på hvordan treningsøktene mine ser ut? Jeg har de siste årene løpt rundt med både div. treningsapper på smarttelefonen med GPS-utstyr, og pulsmåler. For tida er det Runtastic jeg bruker. Kan en få tak i dataene sine fra en slik app?</description>
+    </item>
+    
+    <item>
+      <title>RaskeRe - en kikk på løpsstatistikk med R</title>
+      <link>/post/kan-en-l%C3%B8pe-raskere-med-r/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/kan-en-l%C3%B8pe-raskere-med-r/</guid>
+      <description>Hva handler denne artikkelen om? En rask kikk på løpetider fra de siste årenes løp
+Løping er gøy!
+Utgangspunktet var at jeg satte meg ned og prøvde å finne ut av hvor mange løp jeg har vært med på de siste årene, og hvordan jeg tidsmessig ligger an. Jeg fant at jeg totalt hadde vært med på 19 løp:
+runs = read_delim(here::here(&amp;quot;content/data/runs_sept2019.csv&amp;quot;), &amp;quot;;&amp;quot;, escape_double = FALSE, col_types = cols(dato = col_character()), locale = locale(decimal_mark = &amp;quot;,&amp;quot;, grouping_mark = &amp;quot;|&amp;quot;, encoding = &amp;quot;ISO-8859-1&amp;quot;), trim_ws = TRUE)runs = mutate(runs, dato = as.</description>
+    </item>
     
     <item>
       <title>Hvor like er to dataserier?</title>

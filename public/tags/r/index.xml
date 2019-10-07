@@ -6,10 +6,20 @@
     <description>Recent content in R on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kan en løpe raskere med R (RaskeR)?</title>
+      <link>/post/kan-en-l%C3%B8pe-raskere-med-r-rasker/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/kan-en-l%C3%B8pe-raskere-med-r-rasker/</guid>
+      <description>Hva handler denne artikkelen om? En første kikk på løpsdata fra de siste årenes løp
+Inspirert av forrige artikkels kikk på tider fra de 19 løpene jeg har deltatt i de siste årene, begynte jeg å lure på hvordan treningsøktene mine ser ut? Jeg har de siste årene løpt rundt med både div. treningsapper på smarttelefonen med GPS-utstyr, og pulsmåler. For tida er det Runtastic jeg bruker. Kan en få tak i dataene sine fra en slik app?</description>
+    </item>
     
     <item>
       <title>Fordelinger og SFO-deltakelse [ggplot2]</title>

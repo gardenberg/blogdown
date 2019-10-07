@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/kan-en-l%C3%B8pe-raskere-med-r-rasker/</loc>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/kan-en-l%C3%B8pe-raskere-med-r/</loc>
+    <lastmod>2019-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/hvor-like-er-to-dataserier/</loc>
     <lastmod>2019-09-17T00:00:00+00:00</lastmod>
   </url>
@@ -277,6 +287,12 @@
   </url>
   
   <url>
+    <loc>/categories/l%C3%B8ping/</loc>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/meg/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -296,19 +312,19 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -344,7 +360,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
