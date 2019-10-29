@@ -6,10 +6,21 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forløpsanalyse på treningsdata</title>
+      <link>/post/forl%C3%B8psanalyse-p%C3%A5-treningsdata/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/forl%C3%B8psanalyse-p%C3%A5-treningsdata/</guid>
+      <description>Hva handler denne artikkelen om? Et forsøk på å skvise noe mer innsikt ut av treningsdataene med forløpsanalyse
+Sist så jeg nærmere på treningsdataene mine, og fant litt ulike måter å visualisere dem på. Men kan de også kjøres gjennom en forløpsanalyse?
+Her finnes det to tilnærminger, og to interessante forløp å studere.- Den ene er tida mellom enkelttreninger, dvs. egentlig hvor lange pausene er, og hva som bidrar til kortere vs.</description>
+    </item>
     
     <item>
       <title>Har jeg trent så mye som jeg tror (RaskeRe)?</title>

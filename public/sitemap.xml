@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/forl%C3%B8psanalyse-p%C3%A5-treningsdata/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/kan-en-l%C3%B8pe-raskere-med-r-rasker/</loc>
     <lastmod>2019-10-05T00:00:00+00:00</lastmod>
   </url>
@@ -312,13 +317,13 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -360,7 +365,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -373,6 +378,12 @@
   <url>
     <loc>/tags/</loc>
     <lastmod>2013-08-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/trening/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
