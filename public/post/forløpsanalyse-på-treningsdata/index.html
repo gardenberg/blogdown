@@ -58,6 +58,7 @@
 <p>Her finnes det to tilnærminger, og to interessante forløp å studere.
 - Den ene er tida mellom enkelttreninger, dvs. egentlig hvor lange pausene er, og hva som bidrar til kortere vs. lengre pausetider.
 - Den andre er tida i en lengre treningsperiode, bestående av flere treningsøkter, før den brytes opp.</p>
+<p>Hva konklusjonen blir? Dette fungerer sånn passe godt som eksempel på en ide som ikke viser å gi stort, men ikke så mye mer.</p>
 <p>For å få dette over på et forløpsformat, lager jeg en data.frame med alle datoer i rekka, før jeg joiner inn treningsdataene:</p>
 <pre class="r"><code>df_alle = data.frame(dato = seq(from = as.Date(ymd_hms(min(df$start_time))), to = as.Date(ymd_hms(max(df$start_time))), by = 1)) %&gt;%
   left_join(., df) %&gt;%
@@ -229,6 +230,8 @@ ggplot(data = temp, aes(x = time, y = estimate))+
     
       <a class="basic-alignment left" href="/post/kan-en-l%C3%B8pe-raskere-med-r-rasker/">&laquo; Har jeg trent så mye som jeg tror (RaskeRe)?</a>
     
+    
+      <a class="basic-alignment left" href="/post/alt-for-mange-dataanalyseboker/">Alt for mange bøker om dataanalyse &raquo;</a>
     
   </div>
 </section>

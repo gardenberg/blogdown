@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/alt-for-mange-dataanalyseboker/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/forl%C3%B8psanalyse-p%C3%A5-treningsdata/</loc>
     <lastmod>2019-10-29T00:00:00+00:00</lastmod>
   </url>
@@ -190,13 +195,13 @@
   </url>
   
   <url>
-    <loc>/categories/arbeidsmarked/</loc>
+    <loc>/tags/arbeidsmarked/</loc>
     <lastmod>2011-08-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/arbeidsmarked/</loc>
+    <loc>/categories/arbeidsmarked/</loc>
     <lastmod>2011-08-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -208,20 +213,26 @@
   </url>
   
   <url>
+    <loc>/categories/bok/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2011-08-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/datascience/</loc>
+    <loc>/tags/datascience/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/datascience/</loc>
-    <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+    <loc>/categories/datascience/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -238,14 +249,14 @@
   </url>
   
   <url>
-    <loc>/categories/finans/</loc>
-    <lastmod>2013-02-27T00:00:00+00:00</lastmod>
+    <loc>/tags/finans/</loc>
+    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/finans/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <loc>/categories/finans/</loc>
+    <lastmod>2013-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -262,14 +273,14 @@
   </url>
   
   <url>
-    <loc>/categories/handelspolitikk/</loc>
-    <lastmod>2011-10-03T00:00:00+00:00</lastmod>
+    <loc>/tags/handelspolitikk/</loc>
+    <lastmod>2013-08-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/handelspolitikk/</loc>
-    <lastmod>2013-08-07T00:00:00+00:00</lastmod>
+    <loc>/categories/handelspolitikk/</loc>
+    <lastmod>2011-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -317,19 +328,19 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
     <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -352,6 +363,12 @@
   </url>
   
   <url>
+    <loc>/categories/statistikk/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/statsvitenskap/</loc>
     <lastmod>2012-09-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -365,7 +382,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

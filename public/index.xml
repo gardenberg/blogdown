@@ -6,10 +6,20 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alt for mange bøker om dataanalyse</title>
+      <link>/post/alt-for-mange-dataanalyseboker/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/alt-for-mange-dataanalyseboker/</guid>
+      <description>Hva handler denne artikkelen om? Hylla mi er full av bøker - alt for mange bøker. Jeg snakker om de beste
+Jeg plukka først opp R i 2010. Rett etter studiene i min første jobb, ble jeg satt til å gjøre div. analyser av data i AgriAnalyse. Med en del frihetsgrader til å selv velge metoder og formidlingsmåter, fant jeg raskt ut at datavisualiseringer var noe folk var gira på.</description>
+    </item>
     
     <item>
       <title>Forløpsanalyse på treningsdata</title>

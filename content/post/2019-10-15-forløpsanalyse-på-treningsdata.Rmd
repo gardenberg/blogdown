@@ -17,6 +17,8 @@ Her finnes det to tilnærminger, og to interessante forløp å studere.
 - Den ene er tida mellom enkelttreninger, dvs. egentlig hvor lange pausene er, og hva som bidrar til kortere vs. lengre pausetider.
 - Den andre er tida i en lengre treningsperiode, bestående av flere treningsøkter, før den brytes opp. 
 
+Hva konklusjonen blir? Dette fungerer sånn passe godt som eksempel på en ide som ikke viser å gi stort, men ikke så mye mer.
+
 ```{r, include = FALSE}
 library(tidyverse)
 library(lubridate)
