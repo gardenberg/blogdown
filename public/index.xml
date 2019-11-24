@@ -6,10 +6,20 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grunnleggende statistiske slutninger fra utvalgsundersøkelser</title>
+      <link>/post/grunnleggende-statistiske-slutninger/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/grunnleggende-statistiske-slutninger/</guid>
+      <description>Hva handler denne artikkelen om? Hvorfor gjennomføre en utvalgsundersøkelse, hvordan et utvalg fra en populasjon forholder seg til populasjonen, og hvordan du kan si noe om hvor sikker du er på at estimatet ditt fra utvalget er i nærheten av det reelle tallet
+En grunnleggende arbeidshest i en samfunnsviters verktøyboks er utvalgsundersøkelsen. En smarting fant på et tidspunkt ut at en ikke trengte å spørre alle i en populasjon et spørsmål, for å kunne si noe om hva hele populasjonen mente.</description>
+    </item>
     
     <item>
       <title>Alt for mange bøker om dataanalyse</title>
