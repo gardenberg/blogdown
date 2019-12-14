@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Resultater av Eliteserien 2019 - hvem kom nærmest?</title>
+      <link>/post/resultater-av-eliteserien-2019-hvem-kom-n%C3%A6rmest/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/resultater-av-eliteserien-2019-hvem-kom-n%C3%A6rmest/</guid>
+      <description>Da var Eliteserien over for i år. Hvordan gikk det med tippinga fra mars? Da bestemte jeg for å legge gjennomsnittet av oddssidenes tipping og avisenes ekspertkommentarer til grunn.
+Hvordan ser dette ut opp i mot resultatet? Hvordan ble tabellen til slutt? Jo slik:
+kable(arrange(select(df, Lag, Resultat, MinPrognose = Prognose), Resultat)) LagResultatMinPrognoseMolde11.44Bodø/Glimt210.60Rosenborg31.</description>
+    </item>
     
     <item>
       <title>Grunnleggende statistiske slutninger fra utvalgsundersøkelser</title>

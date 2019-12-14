@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/resultater-av-eliteserien-2019-hvem-kom-n%C3%A6rmest/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/grunnleggende-statistiske-slutninger/</loc>
     <lastmod>2019-11-17T00:00:00+00:00</lastmod>
   </url>
@@ -272,6 +277,12 @@
   </url>
   
   <url>
+    <loc>/categories/fotball/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2019-04-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -333,7 +344,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -345,7 +356,7 @@
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2019-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -387,7 +398,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
