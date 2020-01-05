@@ -190,7 +190,7 @@ temp = left_join(expand(temp, year, week = 1:52), temp) %>%
   mutate(yearweek = ifelse(nchar(week) == 1, paste0(0, week), week),
          yearweek = paste0(year, yearweek),
          id = seq_along(yearweek),
-         treningsdose = as.factor(ifelse(antall_minutter <= 75, "Over 75 min", "Under 75 min"))
+         treningsdose = as.factor(ifelse(antall_minutter >= 75, "Over 75 min", "Under 75 min"))
          )
 
 qplot(data = df, x = duration_min, binwidth = 5) + 

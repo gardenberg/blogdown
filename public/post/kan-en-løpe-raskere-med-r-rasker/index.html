@@ -60,8 +60,7 @@
 <li>Hvor ofte har jeg klart å nå målet mitt om (minst) tre treningsøkter i uka? Jeg mistenker at det ikke er så ofte?</li>
 <li>Er løpsdeltakelse noe jeg trener mot, eller noe jeg blir motivert til å trene av? Eller begge deler?</li>
 </ul>
-<div id="dataene" class="section level1">
-<h1>Dataene</h1>
+<p>#Dataene</p>
 <p>Ja, data kan man få tak i - viser det seg at svaret er. Med en dump fra Runtastic-sida får en ut masse informasjon, inkludert</p>
 <ul>
 <li>oppsummerende data for alle sessions som er registrert,</li>
@@ -104,9 +103,7 @@
          puls_sone_snitt = cut(pulse_avg, breaks = c(0, 126, 141, 155, 170, 184, 210), labels = c(&quot;0&quot;, &quot;Sone 1&quot;, &quot;Sone 2&quot;, &quot;Sone 3&quot;, &quot;Sone 4&quot;, &quot;Sone maks&quot;)),
          puls_sone_maks = cut(pulse_max, breaks = c(0, 126, 141, 155, 170, 184, 210), labels = c(&quot;0&quot;, &quot;Sone 1&quot;, &quot;Sone 2&quot;, &quot;Sone 3&quot;, &quot;Sone 4&quot;, &quot;Sone maks&quot;))
          )</code></pre>
-</div>
-<div id="hvordan-har-jeg-trent-de-siste-arene" class="section level1">
-<h1>Hvordan har jeg trent de siste årene?</h1>
+<p>#Hvordan har jeg trent de siste årene?</p>
 <p>Så hva er det vi har i disse 292 observasjonene her? For det første er antallet treningsaktiviteter forskjellig over årene. Den første registrerte aktiviteten kom i slutten av september 2015. I 2015 registrerte jeg 35 aktiviteter i appen, 2016 opp mot 65, før det var litt lavere igjen i 2017. Det er ingen registreringer mellom slutten av august 2017 og mars 2018. I 2018 kom jeg over 80 registrerte aktiviteter.</p>
 <pre class="r"><code>ggplot(data = df) + 
   geom_bar(aes(x = year)) + 
@@ -127,26 +124,19 @@
 <li>2019 starta også sterkt, relativt sett, men falt brått etter april. Da slo ny jobb og flytteprosjekt antakeligvis inn. I juli kom det et lite hoppp, ettersom joggeskoa ble med på ferie, men så klarte jeg ikke å holde dette oppe inn i høsten.</li>
 </ul>
 <p>Litt overraskende for meg her er at det ikke er noen særlig tydelig sesongvariasjon. I stedet er det diverse livshendelser som plasserer treninga i baksetet.</p>
-<div id="hvor-langt-har-jeg-lpt" class="section level2">
-<h2>Hvor langt har jeg løpt?</h2>
-<p>Over disse øktene har jeg totalt løpt 2484 kilometer. Det er langt - litt lengre enn fra Oslo til Roma. Medianløpet er på 7,5 kilometer, det lengste løpet på 42,2 km (maraton!) - men 50 % av løpene er på mellom 6,5 kilometer og 10,2 kilometer. Histogrammet viser at det er langt flest løp på ca. 7 kilometer, fulgt av 10 og 6 kilometer. Dette er ikke spesielt ulikt for de ulike årene. I 2018 klarte jeg å løpe noe flere lengre løp, slik at medianen lå nærmere 10 kilometer.</p>
+<p>##Hvor langt har jeg løpt?
+Over disse øktene har jeg totalt løpt 2484 kilometer. Det er langt - litt lengre enn fra Oslo til Roma. Medianløpet er på 7,5 kilometer, det lengste løpet på 42,2 km (maraton!) - men 50 % av løpene er på mellom 6,5 kilometer og 10,2 kilometer. Histogrammet viser at det er langt flest løp på ca. 7 kilometer, fulgt av 10 og 6 kilometer. Dette er ikke spesielt ulikt for de ulike årene. I 2018 klarte jeg å løpe noe flere lengre løp, slik at medianen lå nærmere 10 kilometer.</p>
 <p><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-7-1.png" width="672" /><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
-</div>
-<div id="hvor-fort-har-jeg-lpt" class="section level2">
-<h2>Hvor fort har jeg løpt?</h2>
+<p>##Hvor fort har jeg løpt?</p>
 <p>Det raskeste jeg har løpt er 3 min 20 sek på kilometeren. Medianhastigheten er 6 min per kilometer. For det meste har jeg løpt (i gjennomsnitt) på mellom 5 minutt og 30 sekund og 6 minutt og 30 sekund per kilometer. Fordelinga er ganske pen og symmetrisk. De konsistent raskeste tidene kom i 2018, hvor jeg også trente mer spesifikt mot å løpe raskere på ti-kilometer. 2019 har vært litt treigere, men ikke egentlig fullt så varierende som 2015-2017. Riktignok har vi ikke kommet helt inn i vintersesongen enda, noe som nok godt kan ha noe med dette å gjøre.</p>
 <p><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-8-1.png" width="672" /><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
-</div>
-<div id="hva-med-pulsen-da" class="section level2">
-<h2>Hva med pulsen da?</h2>
-<p>For en god del av turene mangler puls-data: For 92 av turene er gjennomsnittspulsen satt til 0, og for 76 er den manglende. Hovedforklaringa på manglende pulsdata er dermed Runtastic-bruken - jeg brukte Runkeeper og Polar-system før dette, og trodde jeg hadde fått importert over dataene. Men tydeligvis ikke. Det er heller ikke slik at dette dekker alle turene i denne perioden. I noen tilfeller har jeg i lite motiverte perioder løpt uten pulsutstyr. Men også alle løp jeg har deltatt i, har jeg etterregistrert i appen - og noen ganger har pulsutstyret feila eller gått tom for batteri. Og det er svinvanskelig å bytte batteri på polar-utstyret uten å ødelegge noe.</p>
+<p>##Hva med pulsen da?
+For en god del av turene mangler puls-data: For 92 av turene er gjennomsnittspulsen satt til 0, og for 76 er den manglende. Hovedforklaringa på manglende pulsdata er dermed Runtastic-bruken - jeg brukte Runkeeper og Polar-system før dette, og trodde jeg hadde fått importert over dataene. Men tydeligvis ikke. Det er heller ikke slik at dette dekker alle turene i denne perioden. I noen tilfeller har jeg i lite motiverte perioder løpt uten pulsutstyr. Men også alle løp jeg har deltatt i, har jeg etterregistrert i appen - og noen ganger har pulsutstyret feila eller gått tom for batteri. Og det er svinvanskelig å bytte batteri på polar-utstyret uten å ødelegge noe.</p>
 <p>Det gir oss 124 turer med pulsdata. Hvordan ser disse ut? Median-pulsen ligger på 152, 50 % av turene ligger mellom 148 og 156, og maks gjennomsnittlig puls er på 181. 2019-dataene har mer variasjon i pulsen. Hva vil dette si, siden puls er relativt til makspuls og hvilepuls? At det meste av treningen har foregått i pulssone 2, for fetbrenning, men også noe i aerob sone.</p>
 <p>Makspulsen er derimot på 176 i snitt, og ligger i 50 % av tilfellene mellom 170 og 180. Den høyest målte pulsen er 199. Det vil si at jeg i de fleste løpene har vært oppe i pulssone 4, anaerob sone.</p>
 <p><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-9-1.png" width="672" /><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-9-2.png" width="672" /><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
-</div>
-<div id="hvor-mye-trening-har-jeg-fatt-i-meg" class="section level2">
-<h2>Hvor mye trening har jeg fått i meg?</h2>
-<p>I følge <a href="https://www.helsedirektoratet.no/faglige-rad/fysisk-aktivitet-for-barn-unge-voksne-eldre-og-gravide/fysisk-aktivitet-for-voksne-og-eldre#voksne-og-eldre-bor-vaere-fysisk-aktive-i-minst-150-minutter-med-moderat-intensitet-eller-75-minutter-med-hoy-intensitet-per-uke">Helsedirektoratet</a> bør voksne være i fysisk aktivitet i 150 minutter moderat intensitet i uka, eller 75 minutter med høy intensitet. Høy intensitet tilsvarer løping.</p>
+<p>##Hvor mye trening har jeg fått i meg?
+I følge <a href="https://www.helsedirektoratet.no/faglige-rad/fysisk-aktivitet-for-barn-unge-voksne-eldre-og-gravide/fysisk-aktivitet-for-voksne-og-eldre#voksne-og-eldre-bor-vaere-fysisk-aktive-i-minst-150-minutter-med-moderat-intensitet-eller-75-minutter-med-hoy-intensitet-per-uke">Helsedirektoratet</a> bør voksne være i fysisk aktivitet i 150 minutter moderat intensitet i uka, eller 75 minutter med høy intensitet. Høy intensitet tilsvarer løping.</p>
 <pre class="r"><code>temp = group_by(df, year, week) %&gt;%
   summarise(antall_minutter = sum(duration_min, na.rm = TRUE)) %&gt;%
   ungroup()
@@ -155,7 +145,7 @@ temp = left_join(expand(temp, year, week = 1:52), temp) %&gt;%
   mutate(yearweek = ifelse(nchar(week) == 1, paste0(0, week), week),
          yearweek = paste0(year, yearweek),
          id = seq_along(yearweek),
-         treningsdose = as.factor(ifelse(antall_minutter &lt;= 75, &quot;Over 75 min&quot;, &quot;Under 75 min&quot;))
+         treningsdose = as.factor(ifelse(antall_minutter &gt;= 75, &quot;Over 75 min&quot;, &quot;Under 75 min&quot;))
          )</code></pre>
 <pre><code>## Joining, by = c(&quot;year&quot;, &quot;week&quot;)</code></pre>
 <pre class="r"><code>qplot(data = df, x = duration_min, binwidth = 5) + 
@@ -175,22 +165,16 @@ temp = left_join(expand(temp, year, week = 1:52), temp) %&gt;%
 <pre><code>## Warning: Removed 115 rows containing missing values (geom_point).</code></pre>
 <p><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-10-3.png" width="672" /></p>
 <p>Figurene viser altså at av de ukene hvor jeg har trent, så har to av tre vært over Helsedirektoratets anbefaling for høyere intensitet. Trendlinja ligger solid over den anbefalte mengden, men dypper seg faretruende nær undersida i det siste. Og for mange uker har jeg ikke trent, og da bør jeg ha dekka inn aktivitetskravet på anna vis, med 150 minutter moderat aktivitet i uka i stedet (altså 25 minutters gange hver dag).</p>
-</div>
-</div>
-<div id="hvor-ofte-har-jeg-klart-malet-om-tre-ganger-i-uka" class="section level1">
-<h1>Hvor ofte har jeg klart målet om tre ganger i uka?</h1>
-<p>Jeg liker egentlig å tro at jeg trener ca. 3 ganger i uka. Hvor ofte har det vært tilfelle her? Ikke veldig ofte - men mer enn ingenting:</p>
+<p>#Hvor ofte har jeg klart målet om tre ganger i uka?
+Jeg liker egentlig å tro at jeg trener ca. 3 ganger i uka. Hvor ofte har det vært tilfelle her? Ikke veldig ofte - men mer enn ingenting:</p>
 <pre><code>## Joining, by = c(&quot;year&quot;, &quot;week&quot;)</code></pre>
 <p><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
-</div>
-<div id="er-lpsdeltakelse-noe-jeg-trener-mot" class="section level1">
-<h1>Er løpsdeltakelse noe jeg trener mot?</h1>
-<p>eller noe jeg blir motivert til å trene av? Eller begge deler?</p>
+<p>#Er løpsdeltakelse noe jeg trener mot?
+eller noe jeg blir motivert til å trene av? Eller begge deler?</p>
 <pre class="r"><code>ggplot(data = temp) + 
   geom_point(aes(x = dato, y = distanse_km, colour = treningsform))</code></pre>
 <p><img src="/post/2019-10-05-kan-en-løpe-raskere-med-r-rasker_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>Det er vanskelig å si. Løpene er mer lagt til vår og høst, enn at de i seg selv påvirker treningsinnsatsen betydelig.</p>
-</div>
 
   </div>
 
