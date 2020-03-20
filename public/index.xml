@@ -6,10 +6,21 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Strømforbruket som tidsserie - kan det hjelpe på strømregninga?</title>
+      <link>/post/kan-en-fikse-str%C3%B8mforbruket-analytisk/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/kan-en-fikse-str%C3%B8mforbruket-analytisk/</guid>
+      <description>Hva handler denne artikkelen om? Nylig flytta jeg inn i et større hus. Da vinteren slo inn, fikk jeg lett sjokk av ny strømregning. Er det mulig å analysere seg ut av dette?
+Modell/teori/forforståelse:Strømregninga bestemmes av nettleie + strømpris * strømforbruk. Det betyr at en kan få ned strømprisen på to måter: få en billigere strømpris, eller redusere strømforbruket. I første omgang skal jeg se på strømforbruket.
+Strømforbruk bestemmes i hovedsak av mengden strøm til oppvarming av vann og luft - dvs.</description>
+    </item>
     
     <item>
       <title>Ble 2019 et bra løpeår?</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/kan-en-fikse-str%C3%B8mforbruket-analytisk/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/ble-2019-et-bra-l%C3%B8pe%C3%A5r/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
@@ -349,7 +354,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -361,7 +366,7 @@
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -385,13 +390,19 @@
   
   <url>
     <loc>/categories/statistikk/</loc>
-    <lastmod>2019-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/statsvitenskap/</loc>
     <lastmod>2012-09-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/str%C3%B8mforbruk/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -403,7 +414,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
