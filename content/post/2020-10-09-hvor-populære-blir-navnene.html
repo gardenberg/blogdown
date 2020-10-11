@@ -1,0 +1,74 @@
+---
+title: Hvor populære blir navnene?
+author: Eivind
+date: '2020-10-09'
+slug: hvor-populære-blir-navnene
+categories:
+  - statistikk
+tags:
+  - R
+---
+
+
+
+<div id="data" class="section level1">
+<h1>Data</h1>
+<pre class="r"><code>#laster inn data på alle jentenavn på fødte fra 1880 til 2019
+#kilde: https://www.ssb.no/statbank/table/10467/tableViewLayout1/
+
+#data
+df &lt;- read_delim(here(&quot;content/data/navnestatistikk/PersonerProsent.csv&quot;), &quot;;&quot;, escape_double = FALSE, 
+                 locale = locale(decimal_mark = &quot;,&quot;, grouping_mark = &quot;|&quot;, encoding = &quot;ISO-8859-1&quot;),
+                 trim_ws = TRUE, skip = 1, na = c(&quot;.&quot;, &quot;..&quot;)) %&gt;%
+  select(fornavn, år, andel = `Andel av fødte (prosent)`) %&gt;%
+  mutate(., andel = parse_number(andel))</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   fornavn = col_character(),
+##   år = col_double(),
+##   `Andel av fødte (prosent)` = col_character(),
+##   Fødte = col_double()
+## )</code></pre>
+<pre class="r"><code>#burde ha en sjekk av at alle årene er med her.</code></pre>
+<p>En anna begrensning med dette, er at det er navn til de som er født i Norge - ikke navn til alle som bor i Norge.</p>
+<p>Hva er det som ligger her? Vi ser nærmere på trednene til ti tilfeldig utvalgte navn.</p>
+<pre class="r"><code>utvalg_av_navn = slice_sample(df, fornavn, n = 10)
+temp = filter(df, fornavn %in% utvalg_av_navn$fornavn)
+
+ggplot(data = temp, aes(x = år, y = andel)) +
+  geom_line() +
+  facet_wrap(vars(fornavn))</code></pre>
+<pre><code>## Warning: Removed 5 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="/post/2020-10-09-hvor-populære-blir-navnene_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="aurora-og-vilde" class="section level1">
+<h1>Aurora og Vilde</h1>
+<pre class="r"><code>#hvor populær er Aurora?
+ggplot(data = filter(df, fornavn == &quot;Aurora&quot;|fornavn == &quot;Vilde&quot;)) +
+  geom_line(aes(x = år, y = andel, colour = fornavn))</code></pre>
+<p><img src="/post/2020-10-09-hvor-populære-blir-navnene_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="prediksjon-av-trend" class="section level1">
+<h1>Prediksjon av trend</h1>
+<pre class="r"><code>#prediksjon med prophet
+#https://facebook.github.io/prophet/docs/quick_start.html#r-api
+
+#påkrevd dataformat
+df_prophet = filter(df, fornavn == &quot;Aurora&quot;) %&gt;%
+  select(ds = år, y = andel) %&gt;%
+  mutate(
+    ds = as.character(ds),
+    ds = as.Date(ds, format = &quot;%Y&quot;))
+
+#modell
+modell = prophet(df_prophet)</code></pre>
+<pre><code>## Disabling weekly seasonality. Run prophet with weekly.seasonality=TRUE to override this.</code></pre>
+<pre><code>## Disabling daily seasonality. Run prophet with daily.seasonality=TRUE to override this.</code></pre>
+<pre class="r"><code>framtida = make_future_dataframe(modell, periods = 80, freq = &quot;year&quot;)
+df_prediksjon = predict(modell, framtida)
+
+#graf
+plot(modell, df_prediksjon)</code></pre>
+<p><img src="/post/2020-10-09-hvor-populære-blir-navnene_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Dette er en enkel tidsserie. Men det er jo ikke urimelig å forvente at navnetrender er nokenlunde like. Dvs. at en kan lære om trenden til et navn, ved å se på andre.</p>
+</div>

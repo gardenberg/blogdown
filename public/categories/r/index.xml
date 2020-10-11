@@ -6,10 +6,20 @@
     <description>Recent content in R on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Statistisk utvalg</title>
+      <link>/post/statistisk-utvalg/</link>
+      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistisk-utvalg/</guid>
+      <description>Hva handler denne artikkelen om? Hvor store utvalg du trenger for å svare på spørsmål om hele populasjonen - og hvorfor det er viktigere med hvem du spør, enn hvor mange du spør. Hvis du skal undersøke alle landets 356 kommuner, trenger du minst et utvalg på 186 kommuner for å med 95 % sikkerhet si at en andel befinner seg mellom 45 % og 55 %
+Hva er poenget med å trekke utvalg?</description>
+    </item>
     
     <item>
       <title>Strømforbruket del 2: mer å spare ved å bytte leverandør, enn å kutte forbruket?</title>

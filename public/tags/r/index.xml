@@ -6,10 +6,19 @@
     <description>Recent content in R on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hvor populære blir navnene?</title>
+      <link>/post/hvor-popul%C3%A6re-blir-navnene/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hvor-popul%C3%A6re-blir-navnene/</guid>
+      <description>Data#laster inn data på alle jentenavn på fødte fra 1880 til 2019#kilde: https://www.ssb.no/statbank/table/10467/tableViewLayout1/#datadf &amp;lt;- read_delim(here(&amp;quot;content/data/navnestatistikk/PersonerProsent.csv&amp;quot;), &amp;quot;;&amp;quot;, escape_double = FALSE, locale = locale(decimal_mark = &amp;quot;,&amp;quot;, grouping_mark = &amp;quot;|&amp;quot;, encoding = &amp;quot;ISO-8859-1&amp;quot;),trim_ws = TRUE, skip = 1, na = c(&amp;quot;.&amp;quot;, &amp;quot;..&amp;quot;)) %&amp;gt;%select(fornavn, år, andel = `Andel av fødte (prosent)`) %&amp;gt;%mutate(., andel = parse_number(andel))## Parsed with column specification:## cols(## fornavn = col_character(),## år = col_double(),## `Andel av fødte (prosent)` = col_character(),## Fødte = col_double()## )#burde ha en sjekk av at alle årene er med her.</description>
+    </item>
     
     <item>
       <title>Har jeg trent så mye som jeg tror (RaskeRe)?</title>

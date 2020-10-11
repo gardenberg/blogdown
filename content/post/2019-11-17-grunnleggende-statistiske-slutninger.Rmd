@@ -239,10 +239,14 @@ p_hat = sum(utvalg$holdning_1/length(utvalg$holdning_1)) #parameterestimatet fra
 sem = sqrt(p_hat*(1-p_hat))/sqrt(length(utvalg$ID))
 
 temp = bind_rows(temp, data.frame("populasjonsparameter_kjent" = FALSE, "andel" = p_hat, "standardfeil" = sem))
-
-knitr::kable(temp)
-
 ```
+
+
+```{r}
+knitr::kable(temp)
+```
+
+
 I mitt eksempel (som bør være det samme som eksempelet som vises her, siden jeg har brukt set.seed()) er andelen som har svart ja på holdningsspørsmål 1 54,4 % i populasjonen på 1000 personer. Som vi ser av formelen, avgjøres sikkerheten av størrelsen på utvalget og størrelsen på andelen i populasjonen: Jo nærmere den faktiske andelen er 50 %, jo større usikkerhet. Og jo større utvalg, destor mindre usikkerhet. I vårt tilfelle er andelen ganske nær 50 %, og utvalget er på 100 personer. Standardfeilen er derfor på ca. 5 %, eller mellom 44 % og 64 %
 
 I utvalget vi har tatt, har 53 % svart ja. Standardfeilen er veldig lik her, som i eksempelet over - faktisk kan en vel si helt lik, når de 8 første desimalene er like. Dvs. at standardfeilen tilsier at den sanne verdien ligger et sted mellom 43 % og 63 %. 
@@ -265,9 +269,14 @@ s_hatt = mean(utvalg$holdning_2) #parameterestimatet for gjennomsnitt
 sem = s_hatt/sqrt(length(utvalg$ID))
 
 temp = bind_rows(temp, data.frame("populasjonsparameter_kjent" = FALSE, "gjennomsnitt" = s_hatt, "standardfeil" = sem))
+```
 
+
+```{r}
 knitr::kable(temp)
 ```
+
+
 
 Her er gjennomsnittsverdien i populasjonen 12 393 (kroner for en hest). Den beregnede standardfeilen for utvalg er 1 239, dvs. at ca. 95 % av utvalg vil være mellom 9 915 og 14 871. 
 
