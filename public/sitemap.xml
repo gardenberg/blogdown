@@ -4,7 +4,7 @@
   
   <url>
     <loc>/post/hvor-popul%C3%A6re-blir-navnene/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -230,13 +230,13 @@
   </url>
   
   <url>
-    <loc>/categories/arbeidsmarked/</loc>
+    <loc>/tags/arbeidsmarked/</loc>
     <lastmod>2011-08-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/arbeidsmarked/</loc>
+    <loc>/categories/arbeidsmarked/</loc>
     <lastmod>2011-08-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -260,14 +260,14 @@
   </url>
   
   <url>
-    <loc>/categories/datascience/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
+    <loc>/tags/datascience/</loc>
+    <lastmod>2019-04-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/datascience/</loc>
-    <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+    <loc>/categories/datascience/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -284,20 +284,14 @@
   </url>
   
   <url>
-    <loc>/categories/finans/</loc>
-    <lastmod>2013-02-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/finans/</loc>
     <lastmod>2013-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/fotball/</loc>
-    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+    <loc>/categories/finans/</loc>
+    <lastmod>2013-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -308,20 +302,26 @@
   </url>
   
   <url>
+    <loc>/categories/fotball/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2019-04-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/handelspolitikk/</loc>
-    <lastmod>2011-10-03T00:00:00+00:00</lastmod>
+    <loc>/tags/handelspolitikk/</loc>
+    <lastmod>2013-08-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/handelspolitikk/</loc>
-    <lastmod>2013-08-07T00:00:00+00:00</lastmod>
+    <loc>/categories/handelspolitikk/</loc>
+    <lastmod>2011-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -369,19 +369,19 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
     <lastmod>2020-09-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -405,7 +405,7 @@
   
   <url>
     <loc>/categories/statistikk/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -429,7 +429,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

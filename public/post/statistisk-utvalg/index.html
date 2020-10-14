@@ -14,7 +14,7 @@
   <title>
     
     
-     Statistisk utvalg 
+     Hvor stort utvalg trenger utvalgsundersøkelsen din? 
     
   </title>
   <link rel="canonical" href="/post/statistisk-utvalg/">
@@ -43,10 +43,10 @@
 
 
 <section id=content>
-  <h1> Statistisk utvalg </h1>
+  <h1> Hvor stort utvalg trenger utvalgsundersøkelsen din? </h1>
 
   <div id=sub-header>
-    Eivind · 2020/09/06 · 7 minute read
+    Eivind · 2020/09/06 · 8 minute read
   </div>
 
   <div class="entry-content">
@@ -96,10 +96,12 @@ feilmargin  = 0.05
 utvalgs_str = ((z_verdi^2)*p*(1-p)) / (feilmargin^2)
 utvalgs_str</code></pre>
 <pre><code>## [1] 384.16</code></pre>
-<p>Da trenger du et utvalg på 385 personer (eller enheter). Formelen er en omforming av den opprinnelige standardfeil-formelen:</p>
+<p>Da trenger du et utvalg på 385 personer (eller enheter), for å med 95 % sannsynlighet kunne si at andelen befinner seg mellom 45 % og 55% i populasjonen.</p>
+<p>Formelen er en omforming av den opprinnelige standardfeil-formelen:</p>
 <pre class="r"><code>p_hatt = 0.5
-sem = sqrt(p_hatt*(1-p_hatt))/sqrt(385)
-p_hatt - (sem * 1.96)</code></pre>
+sem = sqrt(p_hatt*(1-p_hatt))/sqrt(385)</code></pre>
+<p>Det gir følgende konfidensintervall:</p>
+<pre class="r"><code>p_hatt - (sem * 1.96)</code></pre>
 <pre><code>## [1] 0.4500546</code></pre>
 <pre class="r"><code>p_hatt + (sem * 1.96)</code></pre>
 <pre><code>## [1] 0.5499454</code></pre>
@@ -110,9 +112,9 @@ p_hatt - (sem * 1.96)</code></pre>
 korrigert_utvalgsstr = utvalgs_str / (1 + ((utvalgs_str - 1) / pop_str))
 korrigert_utvalgsstr</code></pre>
 <pre><code>## [1] 185.0221</code></pre>
-<p>For å si noe om alle kommunene, holder det med et utvalg på 186 kommuner.</p>
+<p>For å si at en estimert andel med 95 % sannsynlighet ligger +/- 5 prosentpoeng rundt andelen i utvalget, holder det med et utvalg på 186 kommuner.</p>
 <p>Hvordan ser dette ut mer generelt? Vi generer noe data, og plotter den korrigerte nødvendige utvalgsstørrelsen mot størrelsen på populasjonen:</p>
-<p><img src="/post/2020-09-06-statistisk-utvalg_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/post/2020-09-06-statistisk-utvalg_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p><em>Hva hvis jeg skal gjøre en undersøkelse for å estimere et gjennomsnitt, ikke en andel?</em> Framgangsmåten er ganske lik:</p>
 <ol style="list-style-type: decimal">
 <li>Finn populasjonen din.</li>
@@ -121,12 +123,28 @@ korrigert_utvalgsstr</code></pre>
 <li>Konfidensintervall. Hvor nærme det faktiske gjennomsnittet ønsker du å ha det faktiske konfidensnivået på at du er?</li>
 </ol>
 <p>Siden dette avhenger mer av et faktisk estimat på standardavviket, enn andelsberegninga hvor vi bare kan legge 50 % til grunn, står jeg over å demonstrere dette.</p>
-<p><em>Hva hvis jeg ønsker å gjøre undersøkelser av undergrupper her?</em> Hvis du ønsker å gjøre analysere undergrupper (kvinner/menn, gamle/unge, institusjoner etter ulike størrelsesgrupper), trenger hver gruppe også et tilstrekkelig utvalg for at du skal nå den valgte sikkerheten for den gruppa.</p>
 <p><em>Hva med frafall?</em> En ting er å beregne nødvendig utvalgsstørrelse, en anna ting er å sikre at alle som er trukket ut, faktisk deltar.</p>
+<p><em>Hva hvis jeg ønsker å gjøre undersøkelser av undergrupper her?</em> Hvis du ønsker å gjøre analysere undergrupper (kvinner/menn, gamle/unge, institusjoner etter ulike størrelsesgrupper), trenger hver gruppe også et tilstrekkelig utvalg for at du skal nå den valgte sikkerheten for den gruppa.</p>
+<p>Si at vår populasjon av 356 kommuner kan deles i tre grupper: 180 stk. har ikke inngått interkommunalt samarbeid, 120 har inngått interkommunalt samarbeid og er deltakere, og 56 har inngått samarbeid og er vertskommuner. Hvilket utvalg skal til, for at vi med 95 % sannsynlighet kan si at en estimert andel ligger +/- 5 prosentpoeng fra den sanne verdien?</p>
+<p>Før korrigering for størrelse blir verdien den samme som over - 385 kommuner. Men så justerer vi dette for populasjonsstørrelse</p>
+<pre class="r"><code>z_verdi = 1.96
+p = 0.5
+feilmargin  = 0.05
+utvalgs_str = ((z_verdi^2)*p*(1-p)) / (feilmargin^2)
+
+korrigert_utvalgsstr = c(
+  utvalgs_str / (1 + ((utvalgs_str - 1) / 180)),
+  utvalgs_str / (1 + ((utvalgs_str - 1) / 120)),
+  utvalgs_str / (1 + ((utvalgs_str - 1) / 56))
+)
+
+korrigert_utvalgsstr</code></pre>
+<pre><code>## [1] 122.78713  91.61937  48.98661</code></pre>
+<p>Da trengs det hhv. 123 kommuner uten IKS, 92 kommuner som deltar i IKS og 49 kommuner som er vertskommuner. Totalt 264 kommuner, en god del flere enn de 185 vi fant over.</p>
 </div>
 <div id="stratifisert-utvalg" class="section level1">
 <h1>Stratifisert utvalg</h1>
-<p>Når undergrupper i en populasjon har stor variasjon i verdiene sine, eller er interessante i seg selv, eller du allerede veit mye om noen grupper, kan det lønne seg å ta et stratifisert utvalg: dele populasjonen opp i grupper, og trekke tilfeldighetsutvalg fra hver gruppe.</p>
+<p>Her er vi allerede godt på vei inn i stratifiserte utvalg. Når undergrupper i en populasjon har stor variasjon i verdiene sine, eller er interessante i seg selv, eller du allerede veit mye om noen grupper, kan det lønne seg å ta et stratifisert utvalg: dele populasjonen opp i grupper, og trekke tilfeldighetsutvalg fra hver gruppe.</p>
 <p>Snittet fra hver gruppe vektet med størrelsen på gruppa bør bli et bra anslag på gjennomsnittet for hele populasjonen, med mindre utvalgsfeil enn et enkelt utvalg.</p>
 <p>En kan bruke litt ulike strategier for å trekke et stratifisert utvalg. Proporsjonal beregning bruker en utvalgsandel fra hver gruppe proporsjonal til andelen gruppa utgjør av den totale populasjonen. Hvis populasjonen har N totale individer, med m menn og k kvinner (slik at N = m + k), så skal den relative størrelsen på utvalgene være tilsvarende som andelen menn og andelen kvinner. Det forutsetter da selvsagt at du kjenner størrelsen på disse andelene.</p>
 <p>Her griper diskusjonen inn i diskusjonen over, om nødvendig størrelse på utvalget. Hvis du f.eks. ønsker å si noe om alle norske kommuner, men også skal sammenlikne store, middels og små kommuner på en egenskap, med samme konfidensintervall, så tilsier det at du ikke trekker en proporsjonal andel av hvert strata, men trekker større utvalg av mindre grupper, for å sikre at disse også kan inkluderes på en god måte i analysene dine.</p>

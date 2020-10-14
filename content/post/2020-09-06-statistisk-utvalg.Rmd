@@ -1,5 +1,5 @@
 ---
-title: Statistisk utvalg
+title: 'Hvor stort utvalg trenger utvalgsundersøkelsen din?'
 author: Eivind
 date: '2020-09-06'
 slug: statistisk-utvalg
@@ -57,7 +57,6 @@ Så hvis du har
 får du følgende regnestykke:
 
 ```{r}
-
 z_verdi = 1.96
 p = 0.5
 feilmargin  = 0.05
@@ -67,14 +66,21 @@ utvalgs_str
 
 ```
 
-Da trenger du et utvalg på 385 personer (eller enheter). Formelen er en omforming av den opprinnelige standardfeil-formelen:
+Da trenger du et utvalg på 385 personer (eller enheter), for å med 95 % sannsynlighet kunne si at andelen befinner seg mellom 45 % og 55% i populasjonen. 
+
+Formelen er en omforming av den opprinnelige standardfeil-formelen:
 
 ```{r}
 p_hatt = 0.5
 sem = sqrt(p_hatt*(1-p_hatt))/sqrt(385)
+```
+Det gir følgende konfidensintervall:
+
+```{r}
 p_hatt - (sem * 1.96)
 p_hatt + (sem * 1.96)
 ```
+
 Denne utvalgsstørrelsen  gjelder imidlertid for store populasjoner. For mindre populasjoner, der vi trekker om lag 10 % eller mer av populasjonen i utvalget vårt, kan vi gjøre en justering, ved hjelp av den faktiske populasjonsstørrelsen.
 
 Den nye utvalgsstørrelsen = anbefalt utvalgsstørrelse fra den opprinnelige formelen, delt på 1 + ((anbefalinga - 1) / populasjonsstørrelse). Så i eksempelet over, hvis populasjonen vår er alle norske kommuner (i skrivende stund 356 stk), blir utregninga slik:
@@ -86,7 +92,7 @@ korrigert_utvalgsstr = utvalgs_str / (1 + ((utvalgs_str - 1) / pop_str))
 korrigert_utvalgsstr
 ```
 
-For å si noe om alle kommunene, holder det med et utvalg på 186 kommuner. 
+For å si at en estimert andel med 95 % sannsynlighet ligger +/- 5 prosentpoeng rundt andelen i utvalget, holder det med et utvalg på 186 kommuner. 
 
 Hvordan ser dette ut mer generelt? Vi generer noe data, og plotter den korrigerte nødvendige utvalgsstørrelsen mot størrelsen på populasjonen:
 
@@ -113,13 +119,34 @@ ggplot(data = temp) +
 
 Siden dette avhenger mer av et faktisk estimat på standardavviket, enn andelsberegninga hvor vi bare kan legge 50 % til grunn, står jeg over å demonstrere dette. 
 
+*Hva med frafall?* En ting er å beregne nødvendig utvalgsstørrelse, en anna ting er å sikre at alle som er trukket ut, faktisk deltar.
+
 *Hva hvis jeg ønsker å gjøre undersøkelser av undergrupper her?* Hvis du ønsker å gjøre analysere undergrupper (kvinner/menn, gamle/unge, institusjoner etter ulike størrelsesgrupper), trenger hver gruppe også et tilstrekkelig utvalg for at du skal nå den valgte sikkerheten for den gruppa. 
 
-*Hva med frafall?* En ting er å beregne nødvendig utvalgsstørrelse, en anna ting er å sikre at alle som er trukket ut, faktisk deltar.
+Si at vår populasjon av 356 kommuner kan deles i tre grupper: 180 stk. har ikke inngått interkommunalt samarbeid, 120 har inngått interkommunalt samarbeid og er deltakere, og 56 har inngått samarbeid og er vertskommuner. Hvilket utvalg skal til, for at vi med 95 % sannsynlighet kan si at en estimert andel ligger +/- 5 prosentpoeng fra den sanne verdien?
+
+Før korrigering for størrelse blir verdien den samme som over - 385 kommuner. Men så justerer vi dette for populasjonsstørrelse
+
+```{r}
+z_verdi = 1.96
+p = 0.5
+feilmargin  = 0.05
+utvalgs_str = ((z_verdi^2)*p*(1-p)) / (feilmargin^2)
+
+korrigert_utvalgsstr = c(
+  utvalgs_str / (1 + ((utvalgs_str - 1) / 180)),
+  utvalgs_str / (1 + ((utvalgs_str - 1) / 120)),
+  utvalgs_str / (1 + ((utvalgs_str - 1) / 56))
+)
+
+korrigert_utvalgsstr
+```
+
+Da trengs det hhv. 123 kommuner uten IKS, 92 kommuner som deltar i IKS og 49 kommuner som er vertskommuner. Totalt 264 kommuner, en god del flere enn de 185 vi fant over.
 
 # Stratifisert utvalg
 
-Når undergrupper i en populasjon har stor variasjon i verdiene sine, eller er interessante i seg selv, eller du allerede veit mye om noen grupper, kan det lønne seg å ta et stratifisert utvalg: dele populasjonen opp i grupper, og trekke tilfeldighetsutvalg fra hver gruppe. 
+Her er vi allerede godt på vei inn i stratifiserte utvalg. Når undergrupper i en populasjon har stor variasjon i verdiene sine, eller er interessante i seg selv, eller du allerede veit mye om noen grupper, kan det lønne seg å ta et stratifisert utvalg: dele populasjonen opp i grupper, og trekke tilfeldighetsutvalg fra hver gruppe. 
 
 Snittet fra hver gruppe vektet med størrelsen på gruppa bør bli et bra anslag på gjennomsnittet for hele populasjonen, med mindre utvalgsfeil enn et enkelt utvalg.
 
