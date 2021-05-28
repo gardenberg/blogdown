@@ -6,10 +6,30 @@
     <description>Recent content on Suppe og analyse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Eurovision-tippekonkurranse</title>
+      <link>/post/eurovision/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/eurovision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hvordan ser barnevernet ut?</title>
+      <link>/post/hvordan-ser-barnevernet-ut/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hvordan-ser-barnevernet-ut/</guid>
+      <description>Hva handler dette om? Det norske barnevernet er mye diskutert - men hvordan ser det egentlig ut? Hvor mange jobber der? Hvor jobber de? Vi henter noe data fra SSB, lager noen figurer og kart
+DataDet aller meste av data henter vi fra SSBs API, som gir tilgang til dataene i statistikkbanken.
+#befolkningsdata - antall personer og antall barntemp_befolkning = ApiData(urlToData = &amp;quot;https://data.ssb.no/api/v0/no/table/07459&amp;quot;,Region = TRUE,Kjonn = FALSE,Alder = TRUE,ContentsCode = &amp;quot;Personer1&amp;quot;,Tid = &amp;quot;2020&amp;quot;)temp_befolkning = temp_befolkning$datasetbefolkning_totalt = group_by(temp_befolkning, Region) %&amp;gt;%summarise(befolkning_totalt = sum(value)) %&amp;gt;%filter(nchar(Region) == 4, befolkning_totalt &amp;gt; 0)## `summarise()` ungrouping output (override with `.</description>
+    </item>
     
     <item>
       <title>Hvor populære blir navnene?</title>
@@ -250,8 +270,8 @@ Den følgende teksten er inspirert av “Steps to perform survival analysis in R
       
       <guid>/om-meg/</guid>
       <description>Vi stoler på suppe. Alle andre må vise data.
-Flott sitat? Det bør i hvert fall gi mening for andre statsvitere, data-entusiaster og folk over gjennomsnittet glad i metoder og suppe.
-Når jeg ikke lager blogposter om data, R og andre spennende ting, jobber jeg i Integrerings- og mangfoldsdirektoratets analyseseksjon. Jeg har blant annet arbeida med statistikk-sidene som jeg er godt fornøgd med - og også den årlige rapporteringa om hvordan det Egentlig går med integreringa.</description>
+Det er noe alle statsvitere, data-entusiaster og folk over gjennomsnittet glad i metoder og suppe kan skrive under på.
+Når jeg ikke lager blogposter om data, R og andre spennende ting, jobber jeg i Barne-, ungdoms- og familiedirektoratets analysesavdeling. Statistikk om barnevernet og monitorering av kommunalt barnevern er noe av det jeg driver med her. Tidligere har jeg blant annet…</description>
     </item>
     
     <item>
